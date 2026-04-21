@@ -29,6 +29,7 @@ const files = [
   { local: 'contato/index.html',                        r2: 'contato/index.html',                            mime: 'text/html' },
   { local: 'orcamento/index.html',                      r2: 'orcamento/index.html',                          mime: 'text/html' },
   { local: 'clientes/index.html',                       r2: 'clientes/index.html',                           mime: 'text/html' },
+  { local: 'servicos/index.html',                       r2: 'servicos/index.html',                           mime: 'text/html' },
   { local: 'trabalhe-conosco/index.html',               r2: 'trabalhe-conosco/index.html',                   mime: 'text/html' },
   { local: 'politica-privacidade/index.html',           r2: 'politica-privacidade/index.html',               mime: 'text/html' },
   { local: 'politica-cookies/index.html',               r2: 'politica-cookies/index.html',                   mime: 'text/html' },
