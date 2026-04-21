@@ -1,0 +1,10 @@
+node_modules/
+img/
+*.part
+upload-all.mjs
+upload-preview.mjs
+*.py
+*.md
+*.csv
+*.txt
+paletas-preview.html

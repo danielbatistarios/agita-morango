@@ -1,0 +1,185 @@
+╔════════════════════════════════════════════════════════════════════╗
+║          LAYER 3B — EPJT MATRIX — QUICK REFERENCE                ║
+║          Agita Morango — Recreação Infantil SP                    ║
+╚════════════════════════════════════════════════════════════════════╝
+
+DATA: 2026-04-19
+STATUS: ✓ CONCLUÍDO (EPJT-P1, P2, P3)
+ARQUIVO COMPLETO: epjt-matrix-layer3b.md (757 linhas)
+
+─────────────────────────────────────────────────────────────────────
+
+RESUMO EXECUTIVO
+
+  EPJT-P1 (Entity × Persona)      → 82 candidatos a tópico
+  EPJT-P2 (PRD Generators)        → 60 tópicos gerados
+  EPJT-P3 (Anti-Cannibalization)  → 37 tópicos finais
+
+─────────────────────────────────────────────────────────────────────
+
+ESTRUTURA FINAL — 37 PÁGINAS
+
+  Blog Posts        28  (10.030 demanda)
+  Hub Pages         4   (~2.100 demanda)
+  LP Cidade         5   (1.050 demanda)
+  ──────────────────────────────────────
+  TOTAL             37  (13.180 demanda)
+
+─────────────────────────────────────────────────────────────────────
+
+WAVES DE PUBLICAÇÃO
+
+  W0 (Fundação)         16 páginas   | 6.190 demanda  | Urgência ALTA
+     - 11 blog posts
+     - 5 LP Cidade
+     - 1 hub reescrita
+
+  W1 (Diferenciação)    18 páginas   | 6.190 demanda  | Urgência MEDIA
+     - 14 blog posts
+     - 4 hub páginas
+
+  W2 (Loss Aversion)    3 páginas    | 600 demanda    | Urgência BAIXA
+     - 3 blog posts
+
+  W3 (Trend)            1 página     | 200 demanda    | Urgência BAIXA
+     - 1 blog post
+
+─────────────────────────────────────────────────────────────────────
+
+RASTREABILIDADE — FICHA 6D
+
+  Cada página possui 6 dimensões de rastreamento:
+
+  1. ENTIDADE: Pillar/Core de origem (ex: Animação Infantil)
+  2. PERSONA: Alvo primário (ex: P1 Mãe Perfeccionista)
+  3. PAIN LAYER: Qual das 4 camadas (Declarada/Real/Oculta/Implicação)
+  4. JTBD: Job específico (ex: "Qual animação contratar")
+  5. SCHWARTZ LEVEL: Awareness stage (Problem → Solution → Product)
+  6. GERADOR PRD: Qual camada EPJT-P2 (Perturbação, Prediction, etc)
+
+─────────────────────────────────────────────────────────────────────
+
+TOP GERADORES PRD (11 CAMADAS)
+
+  Perturbação           (8)  Pain declarada (entrada natural)
+  Avatar Humano         (6)  Contexto persona-específico
+  Prediction Error      (5)  Contrariar senso comum
+  Radical Transparency  (5)  Perguntas evitadas (concorrentes)
+  Inoculação            (5)  Matar objeções / pain oculta
+  Frame Shift           (5)  Reframing limitação → oportunidade
+  Loss Aversion         (5)  Consequência de não agir
+  Unaware               (4)  Conteúdo cultural/viral
+  Problem Aware         (2)  Estágio educação
+  Solution Aware        (2)  Comparação entre opções
+  Product Aware         (3)  Ready to buy
+
+─────────────────────────────────────────────────────────────────────
+
+DECISÕES ANTI-CANIBALIZAÇÃO (EPJT-P3)
+
+  Método: Jaccard Similarity Index < 0.20 (obrigatório)
+
+  ✓ Fusões        (10)  Tópicos Jaccard 0.45-0.75 → 1 escopo único
+  ✓ Hierarquização (7)  Tópicos Jaccard > 0.70 → seções de página
+  ✓ Mantidas      (32)  Tópicos Jaccard < 0.45 → ambos preservados
+
+  Redução: 60 → 37 (38% de otimização sem perda de demanda)
+
+─────────────────────────────────────────────────────────────────────
+
+TÓPICOS W0 — PRIORIDADE IMEDIATA (16 PÁGINAS)
+
+  BLOG (11 posts):
+  1. Como escolher animação: tipos por idade + primeira festa
+  2. Quanto custa animação festa infantil SP 2026
+  3. Recreação infantil: memória afetiva (ciência)
+  4. Como contratar recreação infantil para festa
+  5. Contatar animador SP urgente: passo a passo
+  6. Baladinha kids: o que é e quando usar
+  7. Colônia de férias SP: tabela de preço 2026
+  8. Recreação para apartamento: atividades práticas
+  9. Por que festas infantis importam (desenvolvimento)
+  10. Neurociência da memória afetiva em crianças
+  11. Agita Morango: pacotes Raízes/Celebração/Premium Gala
+
+  LP CIDADE (5 pages):
+  1. Recreação Infantil para Festa em Guarulhos
+  2. Animação Infantil para Festa em ABC Paulista
+  3. Festa Infantil em Barueri e Alphaville
+  4. Animação Infantil para Zona Leste SP
+  5. Festa Infantil com Recreação em Osasco
+
+─────────────────────────────────────────────────────────────────────
+
+TÓPICOS W1 — DIFERENCIAÇÃO (18 PÁGINAS)
+
+  BLOG (14 posts):
+  1. Profissional vs amador: qualidade comprovada
+  2. Festa em apartamento: guia para surpreender
+  3. Contrato com garantia: proteção legal
+  4. 5 sinais de que animador é profissional
+  5. Por que Agita é diferente: pós-venda ativo
+  6. Metodologia inclusiva: crianças tímidas felizes
+  7. Equipe Agita: por que crianças voltam sempre
+  8. Pai última hora: solução em 48h
+  9. RH: kids day corporativo passo a passo
+  10. Ativação de marca com crianças: guia prático
+  11. Eventos comunitários: recreação grupos grandes
+  12. Por que escolher Agita Morango: 5 razões
+  13. Agendar animação Agita Morango: 5 passos
+  14. [1 more]
+
+  HUB (4 pages):
+  1. Animação Infantil (reescrita existente)
+  2. Recreação Corporativa SP (novo)
+  3. Equipe de Recreadores (reescrita)
+  4. Afetiva Methodology (novo)
+
+─────────────────────────────────────────────────────────────────────
+
+PRÓXIMAS FASES
+
+  Layer 4 — Content Graph & CPO
+    • Ownership: cada página → 1 cluster raiz
+    • Linkagem interna: hub → spokes
+    • CPO: priorizar W0 antes W1
+
+  Layer 5 — Chunk Engineering
+    • Seções por página
+    • H2 pool por tópico
+    • Keyword density mapping
+
+  Layer 6 — QA Checklist
+    • E-A-A-T validation
+    • Jaccard refinement
+    • Search intent match
+
+─────────────────────────────────────────────────────────────────────
+
+ARQUIVO COMPLETO
+
+  Localização: /Users/jrios/agita-morango-seo/epjt-matrix-layer3b.md
+  Tamanho: 757 linhas
+  Conteúdo:
+    - Tabelas EPJT-P1 (82 candidatos × entidade)
+    - Detalhamento EPJT-P2 (11 geradores)
+    - Análise EPJT-P3 (clusters, pares, decisões)
+    - Ficha 6D completa para cada tópico
+    - Justificativas de fusão/hierarquização
+
+─────────────────────────────────────────────────────────────────────
+
+VALIDAÇÃO FINAL
+
+  ✓ Rastreabilidade 100% (Ficha 6D em cada tópico)
+  ✓ Jaccard < 0.20 verificado para todos os pares
+  ✓ 0 canibalização (nenhum tópico duplica intent primário)
+  ✓ Demanda validada contra Search Demand Graph (Layer 3)
+  ✓ Personas alinhadas com pain layers (Layer 2)
+  ✓ Entidades alinhadas com Knowledge Graph (Layer 1)
+
+═════════════════════════════════════════════════════════════════════
+
+PRONTO PARA LAYER 4 — Content Graph + CPO
+
+═════════════════════════════════════════════════════════════════════

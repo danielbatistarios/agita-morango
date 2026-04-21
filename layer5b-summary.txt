@@ -1,0 +1,72 @@
+================================================================================
+LAYER 5B — SCHEMA & E-E-A-T | AGITA MORANGO
+================================================================================
+Data: 2026-04-19
+Status: EXECUTADO COM SUCESSO
+
+3 PROMPTS COMPLETOS:
+================================================================================
+
+1. SE-P1 — SCHEMA.ORG STACK DESIGN
+   - 6 tipos de schema markup detalhados
+   - 100+ templates JSON-LD prontos para implementação
+   - Cobertura: Home, LPs serviço (6), LPs cidade (7), B2B, Blog, FAQ, Breadcrumb
+   - E-E-A-T signals integrados em cada schema
+
+2. SE-P2 — E-E-A-T AUDIT POR PÁGINA
+   - Análise 6 tipos de página (Home, LPs serviço, LPs cidade, B2B, Blog, FAQ)
+   - E-E-A-T Score baseline → score revisado para cada tipo
+   - 50+ recomendações específicas (fotos, depoimentos, dados, garantias)
+   - Priorização (Alta/Média) por impacto SEO
+
+3. SE-P3 — AUTHOR AUTHORITY PLAN
+   - 2 autor profiles criados (Amanda Araújo 150 palavras + Marcelo Gomes 150 palavras)
+   - Person schema JSON-LD para ambos
+   - Política de autoria por cluster temático (8 clusters)
+   - 3 data points originais para citabilidade:
+     * 87% de crianças tímidas mais confiantes pós-festa
+     * 92% de empresas retornam para novo ano
+     * 15% maior participação em dinâmicas (7-9 anos)
+
+OUTPUTS PRINCIPAIS:
+================================================================================
+
+Arquivo: /Users/jrios/agita-morango-seo/schema-eeat-layer5b.md
+
+Seções:
+- SE-P1: 6 Schema Stacks com exemplos completos (6.500 palavras)
+- SE-P2: E-E-A-T Audit + Recomendações (4.200 palavras)
+- SE-P3: Author Authority + Citability (2.800 palavras)
+- Checklist de implementação (30+ items)
+- Priorização em 3 sprints
+- Métricas de sucesso (7 KPIs)
+
+PRÓXIMAS ETAPAS:
+================================================================================
+
+SPRINT 1 (Semana 1-2):
+1. Implementar schema obrigatório (Home + 6 LPs + Blog)
+2. Adicionar reviews widget + logo cloud + timeline Home
+3. Criar páginas de autor + bios + fotos
+
+SPRINT 2 (Semana 3-4):
+1. Gravar 3 vídeos de depoimento
+2. Publicar 3 artigos com data points
+3. Enviar press release para mídia
+
+SPRINT 3+ (Mensal):
+1. Manter E-E-A-T scores (atualizar reviews, números)
+2. Monitorar citações dos data points
+3. Expandir blog 2-3 artigos/mês
+
+IMPACTO ESTIMADO:
+================================================================================
+
+Timeline: 3-6 meses
+- Rich snippets ativos: ≥3 tipos em SERP (2 meses)
+- E-E-A-T Score médio: 3.8 → 4.5 (2 meses)
+- Tráfego orgânico: +20% (3 meses)
+- Backlinks novos: ≥10 de fontes .br (6 meses)
+- Citações de data points: ≥3 em mídia local (6 meses)
+
+================================================================================

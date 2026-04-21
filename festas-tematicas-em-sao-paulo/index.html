@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festas Tematicas em Sao Paulo | Agita Morango</title>
+  <meta name="description" content="Festas tematicas infantis em Sao Paulo com animacao completa por tema: princesas, safari, espaco, circo, super-herois e muito mais. Agita Morango, 15 anos de experiencia.">
+  <link rel="canonical" href="/festas-tematicas-em-sao-paulo/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700;900&family=Bree+Serif&family=Lora:ital@1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --verde: #4aa702; --verde-dark: #3d8c02; --verde-light: #5ebe05;
+      --vermelho: #9d0505; --dourado: #D4AF37; --areia: #e6dfd1;
+      --carvao: #2e2e2e; --carvao-deep: #1a1a1a; --branco: #ffffff;
+      --cinza-claro: #f5f5f5; --cinza-medio: #e0e0e0;
+      --sombra: 0 4px 20px rgba(0,0,0,0.12); --radius: 12px; --radius-lg: 20px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    ul, ol { list-style: none; padding: 0; margin: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Bree Serif', serif; color: var(--carvao); background: var(--branco); overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* ── MEGAMENU NAV ── */
+    .nav { background: #fff; border-bottom: 3px solid var(--verde); box-shadow: 0 2px 12px rgba(0,0,0,.06); position: sticky; top: 0; z-index: 200; }
+    .nav-inner { max-width: 1160px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 64px; gap: 8px; }
+    .nav-logo { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 1.3rem; color: var(--verde); letter-spacing: -0.5px; line-height: 1; flex-shrink: 0; }
+    .nav-logo span { color: var(--vermelho); }
+    .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; flex: 1; justify-content: center; }
+    .nav-item { position: relative; }
+    .nav-item::after { content: ''; position: absolute; top: 100%; left: -24px; right: -24px; height: 16px; background: transparent; }
+    .nav-link-trigger { display: inline-flex; align-items: center; gap: 4px; font-family: 'League Spartan', sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.3px; text-transform: uppercase; color: var(--carvao); background: none; border: none; cursor: pointer; padding: 8px 10px; transition: color .18s; }
+    .nav-link-trigger:hover, .nav-item.is-open .nav-link-trigger { color: var(--verde); }
+    .nav-link-plain { font-family: 'League Spartan', sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.3px; text-transform: uppercase; color: var(--carvao); padding: 8px 10px; display: inline-block; transition: color .18s; }
+    .nav-link-plain:hover { color: var(--verde); }
+    .nav-caret { width: 12px; height: 12px; transition: transform 0.2s; display: inline-block; }
+    .nav-caret svg { width: 12px; height: 12px; display: block; }
+    .nav-item.is-open .nav-caret { transform: rotate(180deg); }
+    /* Dropdown painel */
+    .nav-dropdown { position: fixed; top: 67px; left: 0; right: 0; background: rgba(10,10,10,0.97); backdrop-filter: blur(24px) saturate(1.4); -webkit-backdrop-filter: blur(24px) saturate(1.4); border-top: 2px solid var(--verde); box-shadow: 0 32px 80px rgba(0,0,0,.4); z-index: 190; opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(-10px); transition: opacity 0.2s ease, visibility 0.2s, transform 0.2s ease; }
+    .nav-dropdown.is-open { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
+    .nav-mega-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 260px 1fr; min-height: 320px; }
+    .nav-mega-img { position: relative; overflow: hidden; border-right: 1px solid rgba(255,255,255,.07); }
+    .nav-mega-img-bg { width: 100%; height: 100%; background: linear-gradient(135deg, var(--verde-dark, #3d8c02) 0%, var(--carvao-deep) 100%); display: flex; align-items: flex-end; padding: 24px; }
+    .nav-mega-img-label { font-family: 'Lora', serif; font-size: 1.3rem; font-style: italic; color: #fff; line-height: 1.3; text-shadow: 0 2px 12px rgba(0,0,0,.5); }
+    .nav-mega-img-sub { display: block; font-family: 'Bree Serif', serif; font-size: 0.72rem; font-style: normal; color: rgba(255,255,255,.55); margin-top: 4px; }
+    .nav-mega-img-cta { display: inline-block; margin-top: 12px; padding: 7px 14px; background: var(--verde); color: #fff; font-family: 'League Spartan', sans-serif; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.5px; border-radius: 6px; text-transform: uppercase; transition: background 0.2s; }
+    .nav-mega-img-cta:hover { background: var(--verde-dark, #3d8c02); }
+    .nav-mega-links { padding: 32px 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 0 36px; align-content: start; }
+    .nav-mega-links-single { padding: 32px 40px; display: flex; flex-direction: column; gap: 0; }
+    .nav-mega-col-label { font-family: 'League Spartan', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,.3); margin: 0 0 10px; grid-column: 1/-1; }
+    .nav-mega-link { display: flex; align-items: center; gap: 8px; padding: 8px 0; font-family: 'Bree Serif', serif; font-size: 0.88rem; color: rgba(255,255,255,.65); border-bottom: 1px solid rgba(255,255,255,.05); transition: color 0.15s, padding-left 0.15s; }
+    .nav-mega-link:last-child { border-bottom: none; }
+    .nav-mega-link:hover { color: #fff; padding-left: 5px; }
+    .nav-mega-link-text { line-height: 1.3; }
+    .nav-mega-link-sub { display: block; font-family: 'Bree Serif', serif; font-size: 0.7rem; color: rgba(255,255,255,.3); margin-top: 1px; transition: color 0.15s; }
+    .nav-mega-link:hover .nav-mega-link-sub { color: rgba(255,255,255,.5); }
+    .nav-mega-arrow-row { grid-column: 1/-1; padding-top: 14px; margin-top: 4px; border-top: 1px solid rgba(255,255,255,.07); }
+    .nav-mega-arrow { display: inline-flex; align-items: center; gap: 6px; font-family: 'League Spartan', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--verde); transition: gap 0.15s, color 0.15s; letter-spacing: 0.3px; }
+    .nav-mega-arrow::after { content: '→'; }
+    .nav-mega-arrow:hover { gap: 10px; color: #fff; }
+    /* CTA direita */
+    .nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .nav-wa { font-family: 'League Spartan', sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.3px; text-transform: uppercase; background: var(--vermelho); color: #fff; padding: 9px 20px; border-radius: 100px; display: inline-flex; align-items: center; gap: 6px; transition: transform 0.25s, box-shadow 0.25s; }
+    .nav-wa:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(157,5,5,.4); }
+    /* Hamburger */
+    .nav-hamburger { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; width: 40px; height: 40px; flex-shrink: 0; }
+    .nav-hamburger span { width: 24px; height: 2px; background: var(--carvao); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; transform-origin: center; }
+    /* Mobile overlay */
+    .nav-mobile-overlay { position: fixed; inset: 0; background: rgba(15,15,15,.97); z-index: 210; display: flex; flex-direction: column; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s; overflow-y: auto; }
+    .nav-mobile-overlay.open { opacity: 1; visibility: visible; }
+    .nav-mobile-head { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; border-bottom: 1px solid rgba(255,255,255,.08); flex-shrink: 0; }
+    .nav-mobile-logo { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 1.2rem; color: var(--verde); }
+    .nav-mobile-logo span { color: #fff; }
+    .nav-mobile-close { background: none; border: none; padding: 8px; width: 40px; height: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0; position: relative; cursor: pointer; }
+    .nav-mobile-close span { position: absolute; width: 22px; height: 2px; background: rgba(255,255,255,.8); border-radius: 2px; }
+    .nav-mobile-close span:first-child { transform: rotate(45deg); }
+    .nav-mobile-close span:last-child { transform: rotate(-45deg); }
+    .nav-mobile-cta-wrap { padding: 16px 20px 0; }
+    .nav-mobile-cta-btn { display: block; text-align: center; background: var(--vermelho); color: #fff; font-family: 'League Spartan', sans-serif; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.3px; padding: 14px 20px; border-radius: 100px; text-transform: uppercase; transition: background 0.2s; }
+    .nav-mobile-cta-btn:active { background: #7a0404; }
+    .nav-mobile-list { list-style: none; padding: 10px 0; flex: 1; }
+    .nav-mobile-list li { border-bottom: 1px solid rgba(255,255,255,.06); }
+    .nav-mobile-list-link { display: block; padding: 15px 20px; font-family: 'League Spartan', sans-serif; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.3px; color: rgba(255,255,255,.8); background: none; width: 100%; text-align: left; border: none; cursor: pointer; transition: background 0.15s, color 0.15s; }
+    .nav-mobile-list-link:active, .nav-mobile-list-link:hover { background: rgba(255,255,255,.05); color: #fff; }
+    .nav-mobile-trigger { display: flex; justify-content: space-between; align-items: center; }
+    .nav-mobile-caret { width: 16px; height: 16px; transition: transform 0.2s; flex-shrink: 0; }
+    .nav-mobile-trigger[aria-expanded="true"] .nav-mobile-caret { transform: rotate(180deg); }
+    .nav-mobile-sub { max-height: 0; overflow: hidden; list-style: none; background: rgba(255,255,255,.03); transition: max-height 0.28s ease; }
+    .nav-mobile-sub.open { max-height: 600px; }
+    .nav-mobile-sub-link { display: block; padding: 11px 20px 11px 32px; font-family: 'Bree Serif', serif; font-size: 0.88rem; color: rgba(255,255,255,.6); transition: color 0.15s; }
+    .nav-mobile-sub-link:hover { color: var(--verde); }
+
+    .hero { background: linear-gradient(135deg, #3d8c02 0%, #4aa702 60%, #5ebe05 100%); padding: 4rem 1.5rem 3rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    .hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.3); border-radius: 50px; padding: 0.4rem 1rem; font-family: 'League Spartan', sans-serif; font-weight: 700; font-size: 0.8rem; color: var(--branco); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1.25rem; }
+    .hero h1 { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: clamp(2rem, 4vw, 3rem); color: var(--branco); line-height: 1.1; margin-bottom: 1rem; letter-spacing: -1px; }
+    .hero-sub { font-family: 'Bree Serif', serif; font-size: 1.1rem; color: rgba(255,255,255,0.9); line-height: 1.6; margin-bottom: 2rem; }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-hero { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 0.95rem; padding: 0.85rem 1.8rem; border-radius: 8px; letter-spacing: 0.5px; text-transform: uppercase; cursor: pointer; border: none; display: inline-flex; align-items: center; gap: 0.5rem; }
+    .btn-hero-primary { background: var(--branco); color: var(--verde-dark); }
+    .btn-hero-outline { background: transparent; color: var(--branco); border: 2px solid rgba(255,255,255,0.6); }
+    .hero-card { background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.25); border-radius: var(--radius-lg); padding: 2rem; }
+    .hero-card-title { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 1rem; color: var(--branco); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1.25rem; opacity: 0.8; }
+    .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .hero-stat { text-align: center; }
+    .hero-stat-num { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 2rem; color: var(--branco); line-height: 1; }
+    .hero-stat-label { font-family: 'Bree Serif', serif; font-size: 0.75rem; color: rgba(255,255,255,0.8); margin-top: 0.25rem; }
+
+    .breadcrumb { background: var(--cinza-claro); padding: 0.75rem 1.5rem; border-bottom: 1px solid var(--cinza-medio); }
+    .breadcrumb-inner { max-width: 1200px; margin: 0 auto; }
+    .breadcrumb ol { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem; }
+    .breadcrumb li { font-family: 'League Spartan', sans-serif; font-size: 0.8rem; color: #666; }
+    .breadcrumb li a { color: var(--verde-dark); font-weight: 700; }
+    .breadcrumb-sep { color: #999; margin: 0 0.25rem; }
+
+    section { padding: 4rem 1.5rem; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--verde); margin-bottom: 0.5rem; }
+    .section-title { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--carvao); line-height: 1.2; margin-bottom: 1rem; letter-spacing: -0.5px; }
+    .section-title-white { color: var(--branco); }
+    .section-sub { font-size: 1rem; color: #555; line-height: 1.7; max-width: 700px; }
+
+    .oque-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-top: 2.5rem; }
+    .oque-text p { font-size: 1rem; line-height: 1.8; color: #444; margin-bottom: 1.25rem; }
+    .oque-text p:last-child { margin-bottom: 0; }
+    .oque-img { background: var(--cinza-medio); border-radius: var(--radius-lg); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .oque-img-placeholder { font-family: 'League Spartan', sans-serif; font-weight: 700; font-size: 0.85rem; color: #888; text-align: center; padding: 1rem; }
+
+    .cards-section { background: var(--cinza-claro); }
+    .cards-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
+    .card { background: var(--branco); border-radius: var(--radius); padding: 1.5rem; border-top: 4px solid var(--verde); box-shadow: var(--sombra); }
+    .card-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .card-title { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 1rem; color: var(--carvao); margin-bottom: 0.5rem; }
+    .card-text { font-size: 0.85rem; color: #555; line-height: 1.6; }
+
+    .dif-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+    .dif-card { background: var(--branco); border-radius: var(--radius); padding: 1.75rem; border-top: 4px solid var(--verde); box-shadow: var(--sombra); }
+    .dif-icon { font-size: 2.2rem; margin-bottom: 0.75rem; }
+    .dif-title { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 1rem; color: var(--carvao); margin-bottom: 0.5rem; }
+    .dif-text { font-size: 0.9rem; color: #555; line-height: 1.6; }
+
+    .dark-section { background: var(--carvao-deep); }
+    .dark-section .section-label { color: var(--verde-light); }
+    .dark-section .section-sub { color: rgba(255,255,255,0.7); }
+    .process-list { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2.5rem; max-width: 700px; }
+    .process-item { display: grid; grid-template-columns: 48px 1fr; gap: 1.25rem; align-items: start; }
+    .process-num { background: var(--verde); border-radius: 50%; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 1.1rem; color: var(--branco); flex-shrink: 0; }
+    .process-content {}
+    .process-title { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 1rem; color: var(--branco); margin-bottom: 0.35rem; }
+    .process-text { font-size: 0.87rem; color: rgba(255,255,255,0.65); line-height: 1.6; }
+
+    .depo-section { background: var(--areia); }
+    .depo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+    .depo-card { background: var(--branco); border-radius: var(--radius); padding: 1.75rem; box-shadow: var(--sombra); }
+    .depo-stars { color: var(--dourado); font-size: 1rem; margin-bottom: 0.75rem; letter-spacing: 2px; }
+    .depo-text { font-family: 'Lora', serif; font-style: italic; font-size: 0.95rem; color: #444; line-height: 1.7; margin-bottom: 1rem; }
+    .depo-author { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 0.85rem; color: var(--verde-dark); }
+    .depo-location { font-family: 'Bree Serif', serif; font-size: 0.78rem; color: #888; }
+
+    .faq-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0.75rem; max-width: 800px; }
+    .faq-item { border: 1px solid var(--cinza-medio); border-radius: var(--radius); overflow: hidden; }
+    .faq-question { width: 100%; background: var(--branco); border: none; padding: 1.1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'League Spartan', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--carvao); text-align: left; gap: 1rem; }
+    .faq-icon { font-size: 1.2rem; color: var(--verde); transition: transform 0.3s; flex-shrink: 0; }
+    .faq-question[aria-expanded="true"] .faq-icon { transform: rotate(180deg); }
+    .faq-answer { padding: 0 1.5rem 1.25rem; font-size: 0.9rem; color: #555; line-height: 1.7; }
+    .faq-answer[hidden] { display: none; }
+
+    .cta-section { background: var(--vermelho); position: relative; overflow: hidden; text-align: center; }
+    .cta-section::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Ccircle cx='40' cy='40' r='6' fill='%23ffffff' fill-opacity='0.04'/%3E%3C/g%3E%3C/svg%3E"); }
+    .cta-inner { position: relative; z-index: 1; }
+    .cta-section .section-title-white { margin-bottom: 0.75rem; }
+    .cta-section .section-sub { color: rgba(255,255,255,0.85); margin: 0 auto 2rem; }
+    .cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .btn-cta { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 0.95rem; padding: 0.9rem 2rem; border-radius: 8px; letter-spacing: 0.5px; text-transform: uppercase; cursor: pointer; border: none; display: inline-flex; align-items: center; gap: 0.5rem; }
+    .btn-cta-white { background: var(--branco); color: var(--vermelho); }
+    .btn-cta-outline { background: transparent; color: var(--branco); border: 2px solid rgba(255,255,255,0.6); }
+
+    .rel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+    .rel-card { background: var(--cinza-claro); border-radius: var(--radius); padding: 1.5rem; border-left: 4px solid var(--verde); }
+    .rel-card-title { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 1rem; color: var(--carvao); margin-bottom: 0.5rem; }
+    .rel-card-text { font-size: 0.85rem; color: #666; margin-bottom: 1rem; line-height: 1.5; }
+    .rel-card-link { font-family: 'League Spartan', sans-serif; font-weight: 700; font-size: 0.82rem; color: var(--verde-dark); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ── FOOTER ── */
+    .footer { background: var(--carvao-deep); color: rgba(255,255,255,.6); padding: 60px 24px 0; overflow: hidden; position: relative; }
+    .footer-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; }
+    .footer-brand-col {}
+    .footer-logo { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 1.3rem; color: var(--verde); letter-spacing: -0.5px; line-height: 1; display: inline-block; margin-bottom: 14px; }
+    .footer-logo span { color: #fff; }
+    .footer-tagline { font-family: 'Lora', serif; font-style: italic; font-size: 0.88rem; line-height: 1.6; color: rgba(255,255,255,.5); margin-bottom: 16px; }
+    .footer-contato p { font-family: 'Bree Serif', serif; font-size: 0.82rem; color: rgba(255,255,255,.45); line-height: 1.8; }
+    .footer-social { display: flex; gap: 10px; margin-top: 16px; }
+    .footer-social a { width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,.07); display: flex; align-items: center; justify-content: center; font-family: 'League Spartan', sans-serif; font-weight: 700; font-size: 0.65rem; color: rgba(255,255,255,.6); transition: background 0.2s, color 0.2s; }
+    .footer-social a:hover { background: var(--verde); color: #fff; }
+    .footer-col h4 { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 16px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-family: 'Bree Serif', serif; font-size: 0.84rem; color: rgba(255,255,255,.58); transition: color 0.2s, padding-left 0.2s; display: block; }
+    .footer-col ul li a:hover { color: var(--verde); padding-left: 4px; }
+    .footer-wordmark { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: clamp(3.5rem, 12vw, 9rem); color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.08); letter-spacing: -4px; line-height: 1; text-align: center; display: block; pointer-events: none; margin-top: -0.1em; }
+    .footer-wordmark span { color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.08); }
+    .footer-bottom { max-width: 1160px; margin: 0 auto; padding: 20px 0; border-top: 1px solid rgba(255,255,255,.07); display: flex; justify-content: space-between; align-items: center; font-family: 'Bree Serif', serif; font-size: 0.78rem; color: rgba(255,255,255,.3); flex-wrap: wrap; gap: 8px; }
+    .footer-bottom a { color: rgba(255,255,255,.45); transition: color 0.2s; }
+    .footer-bottom a:hover { color: var(--verde); }
+
+    .whatsapp-float { position: fixed; bottom: 5rem; right: 1.25rem; z-index: 999; background: #25d366; color: var(--branco); width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37,211,102,0.5); font-size: 1.6rem; }
+    .sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 998; background: var(--verde-dark); padding: 0.75rem 1.5rem; padding-bottom: calc(0.75rem + env(safe-area-inset-bottom)); }
+    .sticky-cta a { display: block; text-align: center; font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 0.9rem; color: var(--branco); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ── SCROLL CAROUSEL (mobile) ── */
+    .scroll-arrows { display: none; justify-content: flex-end; gap: 0.5rem; margin-bottom: 0.75rem; }
+    .scroll-arrow { width: 36px; height: 36px; border-radius: 50%; background: var(--verde); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--branco); font-size: 1.1rem; line-height: 1; transition: background 0.2s; }
+    .scroll-arrow:hover { background: var(--verde-dark); }
+    .scroll-carousel { overflow: hidden; }
+
+    .whatsapp-float { position: fixed; bottom: 5rem; right: 1.25rem; z-index: 999; background: #25d366; color: var(--branco); width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37,211,102,0.5); font-size: 1.6rem; }
+    .sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 998; background: var(--verde-dark); padding: 0.75rem 1.5rem; padding-bottom: calc(0.75rem + env(safe-area-inset-bottom)); }
+    .sticky-cta a { display: block; text-align: center; font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 0.9rem; color: var(--branco); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    @media (max-width: 900px) { .cards-grid-4 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) {
+      .nav-links { display: none; } .nav-toggle { display: flex; }
+      .hero-inner { grid-template-columns: 1fr; } .hero-card { display: none; }
+      .oque-grid { grid-template-columns: 1fr; } .oque-img { display: none; }
+      .cards-grid-4 { grid-template-columns: 1fr; }
+      .dif-grid { grid-template-columns: 1fr; }
+      .depo-grid { grid-template-columns: 1fr; } .rel-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-brand-col { grid-column: 1 / -1; } .footer-bottom { flex-direction: column; text-align: center; }
+      .sticky-cta { display: block; } body { padding-bottom: 64px; }
+    }
+    @media (hover: hover) {
+      .btn-hero-primary:hover { background: var(--areia); }
+      .btn-hero-outline:hover { background: rgba(255,255,255,0.1); }
+      .card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.15); transition: all 0.3s; }
+      .btn-cta-white:hover { background: var(--areia); }
+      .btn-cta-outline:hover { background: rgba(255,255,255,0.1); }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+
+    /* FORM */
+    .form-section { background: #1a1a2e; position: relative; padding: 80px 20px; overflow: hidden; }
+    .form-mesh { position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,.06) 1px, transparent 0); background-size: 32px 32px; pointer-events: none; }
+    .form-noise { position: absolute; inset: 0; opacity: .04; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); pointer-events: none; }
+    .form-inner { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; position: relative; z-index: 1; }
+    @media(max-width: 768px) { .form-inner { grid-template-columns: 1fr; } }
+    .form-copy h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); color: #fff; margin-bottom: 16px; }
+    .form-copy p { color: #ccc; margin-bottom: 24px; }
+    .form-promises { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+    .form-promises li { display: flex; align-items: center; gap: 10px; color: #ccc; font-size: .95rem; }
+    .form-promises svg { color: #e63946; flex-shrink: 0; }
+    .form-card { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 8px 32px rgba(0,0,0,.2); }
+    .form-dots { display: flex; gap: 8px; margin-bottom: 24px; }
+    .form-dot { width: 8px; height: 8px; border-radius: 50%; background: #ddd; transition: background .3s; }
+    .form-dot.active { background: #e63946; }
+    .form-step { display: none; }
+    .form-step.active { display: block; }
+    .form-step p.form-step-q { font-weight: 700; margin-bottom: 16px; font-size: 1rem; color: #1a1a2e; }
+    .form-options { display: flex; flex-direction: column; gap: 10px; }
+    .form-option { padding: 12px 16px; border: 2px solid #eee; border-radius: 8px; cursor: pointer; font-size: .95rem; transition: all .2s; background: #fff; text-align: left; }
+    .form-option:hover, .form-option.selected { border-color: #e63946; background: #fff5f5; }
+    .form-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+    .form-input { width: 100%; padding: 12px 16px; border: 2px solid #eee; border-radius: 8px; font-size: 1rem; margin-bottom: 16px; box-sizing: border-box; }
+    .form-input:focus { outline: none; border-color: #e63946; }
+    .btn-form-send { background: #25D366; color: #fff; border: none; padding: 14px 24px; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; width: 100%; margin-top: 8px; }
+    .form-confirm { text-align: center; padding: 20px 0; }
+    .form-confirm p { color: #333; margin-bottom: 16px; }
+
+    /* GALERIA */
+    .galeria-section { background: #1a1a2e; padding: 80px 20px; overflow: hidden; }
+    .galeria-section .section-title-white { color: #fff; }
+    .galeria-track { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 16px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .galeria-track::-webkit-scrollbar { display: none; }
+    .galeria-item { flex: 0 0 calc(33.333% - 11px); height: 220px; border-radius: 14px; overflow: hidden; background: #333; position: relative; cursor: pointer; scroll-snap-align: start; }
+    @media(max-width: 640px) { .galeria-item { flex: 0 0 76vw; height: 180px; } }
+    .galeria-item-inner { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; }
+    .galeria-item-inner svg { opacity: .7; color: #fff; }
+    .galeria-item-inner span { font-size: .8rem; color: rgba(255,255,255,.7); text-align: center; padding: 0 12px; }
+    .galeria-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.6) 0%, transparent 60%); display: flex; align-items: flex-end; padding: 12px; opacity: 0; transition: opacity .3s; }
+    .galeria-item:hover .galeria-overlay { opacity: 1; }
+    .galeria-overlay span { color: #fff; font-size: .8rem; }
+
+    /* EQUIP */
+    .equipamento-section { background: #f8f9fa; padding: 80px 20px; }
+    .equip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 960px; margin: 0 auto; }
+    @media(max-width: 768px) { .equip-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media(max-width: 400px) { .equip-grid { grid-template-columns: 1fr; } }
+    .equip-card { background: #fff; border-radius: 16px; padding: 28px 20px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,.06); }
+    .equip-icon { font-size: 2.2rem; margin-bottom: 12px; }
+    .equip-title { font-size: 1rem; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; }
+    .equip-text { font-size: .9rem; color: #555; line-height: 1.5; }
+
+    /* EEAT */
+    .eeat-section { background: #1a1a2e; padding: 80px 20px; color: #fff; }
+    .eeat-inner { max-width: 960px; margin: 0 auto; }
+    .eeat-section .section-title { color: #fff; }
+    .eeat-text p { color: #ccc; line-height: 1.7; margin-bottom: 16px; }
+    .eeat-text a { color: #e63946; }
+    .eeat-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
+    @media(max-width: 640px) { .eeat-stats { grid-template-columns: repeat(2, 1fr); } }
+    .eeat-stat { text-align: center; }
+    .eeat-stat strong { display: block; font-size: 2rem; font-weight: 800; color: #e63946; }
+    .eeat-stat span { font-size: .85rem; color: #aaa; }
+
+    /* ONDE */
+    .onde-estamos { background: #0f0f1a; padding: 80px 20px; position: relative; overflow: hidden; }
+    .onde-mesh { position: absolute; inset: 0; background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,.05) 1px, transparent 0); background-size: 28px 28px; pointer-events: none; }
+    .onde-inner { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; position: relative; z-index: 1; }
+    @media(max-width: 768px) { .onde-inner { grid-template-columns: 1fr; } }
+    .onde-mapa iframe { width: 100%; height: 300px; border-radius: 14px; border: none; }
+    .onde-eyebrow { font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; color: #e63946; font-weight: 700; display: block; margin-bottom: 12px; }
+    .onde-estamos h2 { color: #fff; font-size: clamp(1.4rem, 2.5vw, 2rem); margin-bottom: 28px; }
+    .onde-row { display: flex; gap: 12px; margin-bottom: 16px; align-items: flex-start; }
+    .onde-row-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+    .onde-row-info strong { display: block; color: #fff; font-size: .9rem; margin-bottom: 2px; }
+    .onde-row-info span { color: #aaa; font-size: .85rem; }
+    .onde-cidades { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
+    .onde-cidade-tag { background: rgba(255,255,255,.08); color: #ccc; padding: 4px 12px; border-radius: 20px; font-size: .8rem; }
+    .btn-onde { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; margin-top: 8px; }
+
+    /* LIGHTBOX */
+    #lbBackdrop { display: flex; }
+    #lbBackdrop[style*="display: none"] { display: none !important; }
+    #lbImg { max-width: 90vw; max-height: 75vh; }
+    #lbIframe { width: 80vw; height: 60vh; }
+  </style>
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://agitamorango.com.br/#entity",
+      "name": "Agita Morango",
+      "url": "https://agitamorango.com.br",
+      "telephone": "+55-11-98404-9485",
+      "address": { "@type": "PostalAddress", "addressLocality": "Sao Paulo", "addressRegion": "SP", "addressCountry": "BR" },
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "620", "bestRating": "5" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Festas Tematicas Infantis em Sao Paulo",
+      "provider": { "@id": "https://agitamorango.com.br/#entity" },
+      "areaServed": { "@type": "City", "name": "Sao Paulo" },
+      "description": "Animacao completa para festas tematicas infantis em Sao Paulo: personagens, decoracao, brincadeiras e atividades alinhadas ao tema escolhido pela crianca.",
+      "url": "https://agitamorango.com.br/festas-tematicas-em-sao-paulo/"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://agitamorango.com.br/" },
+        { "@type": "ListItem", "position": 2, "name": "Servicos", "item": "https://agitamorango.com.br/empresa-de-recreacao-em-sao-paulo/" },
+        { "@type": "ListItem", "position": 3, "name": "Festas Tematicas", "item": "https://agitamorango.com.br/festas-tematicas-em-sao-paulo/" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "A Agita Morango adapta todas as atividades ao tema da festa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. Brincadeiras, gincanas, personagens, oficinas e ate o repertorio musical sao adaptados ao tema escolhido pela crianca, criando uma experiencia imersiva e coesa." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais os temas de festa mais procurados em Sao Paulo?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Os mais contratados sao princesas, safari, espaco sideral, circo, super-herois, fazendinha, fundo do mar e unicornio. Novos temas sao criados sob medida para temas exclusivos." }
+        },
+        {
+          "@type": "Question",
+          "name": "Com quanta antecedencia devo contratar a animacao tematica?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Para temas em catalogo, recomendamos 15 a 30 dias de antecedencia. Para temas exclusivos, o ideal e 45 dias para desenvolvimento do roteiro e preparacao do material tematico." }
+        }
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+
+<header class="nav" role="banner">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Agita Morango - pagina inicial">Agita <span>Morango</span></a>
+    <nav aria-label="Navegacao principal">
+      <ul class="nav-links">
+
+        <!-- Início -->
+        <li class="nav-item">
+          <a href="/" class="nav-link-plain">Início</a>
+        </li>
+
+        <!-- Para Festas -->
+        <li class="nav-item nav-item-dropdown" id="dd-festas">
+          <button class="nav-link-trigger" aria-haspopup="true" aria-expanded="false">
+            Para Festas
+            <span class="nav-caret"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 6 8 10 12 6"/></svg></span>
+          </button>
+          <div class="nav-dropdown" id="dd-festas-panel" role="region">
+            <div class="nav-mega-inner">
+              <div class="nav-mega-img">
+                <div class="nav-mega-img-bg" style="background:linear-gradient(160deg,#1a3a1a 0%,#1a1a1a 100%);">
+                  <div>
+                    <span class="nav-mega-img-label">Festas<br>Inesquecíveis</span>
+                    <span class="nav-mega-img-sub">Para crianças de 0 a 12 anos</span>
+                    <a href="/animacao-infantil-para-festas-em-sp/" class="nav-mega-img-cta">Ver todos os serviços</a>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-mega-links">
+                <p class="nav-mega-col-label">Festas e Eventos</p>
+                <a href="/aniversario-infantil-em-sao-paulo/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Aniversário Infantil<span class="nav-mega-link-sub">Festa completa com animação</span></span>
+                </a>
+                <a href="/festas-tematicas-em-sao-paulo/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Festas Temáticas<span class="nav-mega-link-sub">Cenários, personagens e atividades</span></span>
+                </a>
+                <a href="/festa-das-cores-em-sao-paulo/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Festa das Cores<span class="nav-mega-link-sub">Experiência sensorial e colorida</span></span>
+                </a>
+                <a href="/festa-do-pijama-em-sao-paulo/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Festa do Pijama<span class="nav-mega-link-sub">Noite especial com muita diversão</span></span>
+                </a>
+                <a href="/colonia-de-ferias-infantil-sp/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Colônia de Férias<span class="nav-mega-link-sub">Programa completo de férias</span></span>
+                </a>
+                <a href="/recreacao-a-domicilio-em-sao-paulo/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Recreação a Domicílio<span class="nav-mega-link-sub">Na sua casa ou espaço escolhido</span></span>
+                </a>
+                <a href="/espaco-baby-infantil-para-casamentos-em-sp/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Espaço Baby para Casamentos<span class="nav-mega-link-sub">Cuidado especial para os pequenos</span></span>
+                </a>
+                <div class="nav-mega-arrow-row">
+                  <a href="/animacao-infantil-para-festas-em-sp/" class="nav-mega-arrow">Ver todos os serviços para festas</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Para Empresas -->
+        <li class="nav-item nav-item-dropdown" id="dd-empresas">
+          <button class="nav-link-trigger" aria-haspopup="true" aria-expanded="false">
+            Para Empresas
+            <span class="nav-caret"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 6 8 10 12 6"/></svg></span>
+          </button>
+          <div class="nav-dropdown" id="dd-empresas-panel" role="region">
+            <div class="nav-mega-inner">
+              <div class="nav-mega-img">
+                <div class="nav-mega-img-bg" style="background:linear-gradient(160deg,#3a0000 0%,#1a1a1a 100%);">
+                  <div>
+                    <span class="nav-mega-img-label">Soluções<br>Corporativas</span>
+                    <span class="nav-mega-img-sub">Kids Day, Family Day, eventos B2B</span>
+                    <a href="/recreacao-corporativa-sp/" class="nav-mega-img-cta">Ver serviços B2B</a>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-mega-links">
+                <p class="nav-mega-col-label">Eventos Corporativos</p>
+                <a href="/kids-day-corporativo-em-sao-paulo/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Kids Day Corporativo<span class="nav-mega-link-sub">Estrutura completa para o evento</span></span>
+                </a>
+                <a href="/family-day-corporativo-em-sao-paulo/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Family Day Corporativo<span class="nav-mega-link-sub">Engaje sua equipe e famílias</span></span>
+                </a>
+                <a href="/recreacao-corporativa-sp/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Recreação Corporativa<span class="nav-mega-link-sub">Terceirização de recreação infantil</span></span>
+                </a>
+                <a href="/ativacoes-de-marca-com-criancas-em-sao-paulo/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Ativações de Marca<span class="nav-mega-link-sub">Experiências com o público infantil</span></span>
+                </a>
+                <a href="/recreacao-infantil-corridas-de-rua-sp/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Recreação em Corridas de Rua<span class="nav-mega-link-sub">Espaço kids em eventos esportivos</span></span>
+                </a>
+                <a href="/recreacao-infantil-para-escolas-sp/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Recreação para Escolas<span class="nav-mega-link-sub">Programas pedagógicos e eventos</span></span>
+                </a>
+                <a href="/recreacao-infantil-para-hoteis-sp/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Recreação para Hotéis<span class="nav-mega-link-sub">Miniclube e atividades hoteleiras</span></span>
+                </a>
+                <div class="nav-mega-arrow-row">
+                  <a href="/recreacao-corporativa-sp/" class="nav-mega-arrow">Ver todas as soluções corporativas</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Servicos -->
+        <li class="nav-item nav-item-dropdown" id="dd-servicos">
+          <button class="nav-link-trigger" aria-haspopup="true" aria-expanded="false">
+            Serviços
+            <span class="nav-caret"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 6 8 10 12 6"/></svg></span>
+          </button>
+          <div class="nav-dropdown" id="dd-servicos-panel" role="region">
+            <div class="nav-mega-inner">
+              <div class="nav-mega-img">
+                <div class="nav-mega-img-bg" style="background:linear-gradient(160deg,#1a2a3a 0%,#1a1a1a 100%);">
+                  <div>
+                    <span class="nav-mega-img-label">Nossa<br>Estrutura</span>
+                    <span class="nav-mega-img-sub">15 anos de experiência premium</span>
+                    <a href="/animacao-infantil-para-festas-em-sp/" class="nav-mega-img-cta">Conhecer serviços</a>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-mega-links">
+                <p class="nav-mega-col-label">Animação e Shows</p>
+                <a href="/animacao-infantil-para-festas-em-sp/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Animação Infantil<span class="nav-mega-link-sub">Time completo de animadores</span></span>
+                </a>
+                <a href="/dj-infantil-para-festas-em-sao-paulo/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">DJ Infantil<span class="nav-mega-link-sub">Som, luzes e pista de dança kids</span></span>
+                </a>
+                <a href="/baladinha-kids-e-dj-infantil-em-sao-paulo/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Baladinha Kids<span class="nav-mega-link-sub">Experiência de balada para crianças</span></span>
+                </a>
+                <a href="/show-musical-infantil-em-sao-paulo/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Show Musical Infantil<span class="nav-mega-link-sub">Apresentação ao vivo interativa</span></span>
+                </a>
+                <a href="/show-de-magica-infantil-em-sao-paulo/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Show de Mágica<span class="nav-mega-link-sub">Ilusionismo para encantar</span></span>
+                </a>
+                <a href="/personagens-para-festas-infantis-em-sao-paulo/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Personagens<span class="nav-mega-link-sub">Seus heróis favoritos ao vivo</span></span>
+                </a>
+                <a href="/espaco-baby-para-festa-sp/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Espaço Baby<span class="nav-mega-link-sub">Ambiente seguro para bebês</span></span>
+                </a>
+                <a href="/camarim-infantil-para-festas-em-sao-paulo/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Camarim Infantil<span class="nav-mega-link-sub">Maquiagem artística e caracterização</span></span>
+                </a>
+                <div class="nav-mega-arrow-row">
+                  <a href="/animacao-infantil-para-festas-em-sp/" class="nav-mega-arrow">Ver todos os serviços</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Sobre Nos -->
+        <li class="nav-item nav-item-dropdown" id="dd-sobre">
+          <button class="nav-link-trigger" aria-haspopup="true" aria-expanded="false">
+            Sobre Nós
+            <span class="nav-caret"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 6 8 10 12 6"/></svg></span>
+          </button>
+          <div class="nav-dropdown" id="dd-sobre-panel" role="region">
+            <div class="nav-mega-inner">
+              <div class="nav-mega-img">
+                <div class="nav-mega-img-bg" style="background:linear-gradient(160deg,#2a1a00 0%,#1a1a1a 100%);">
+                  <div>
+                    <span class="nav-mega-img-label">Agita<br>Morango</span>
+                    <span class="nav-mega-img-sub">Desde 2011 em São Paulo</span>
+                    <a href="/sobre/" class="nav-mega-img-cta">Conhecer a empresa</a>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-mega-links nav-mega-links-single">
+                <p class="nav-mega-col-label">A Empresa</p>
+                <a href="/sobre/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Sobre a Agita Morango<span class="nav-mega-link-sub">Nossa história e metodologia</span></span>
+                </a>
+                <a href="/cases-e-clientes-de-evento-infantil/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Cases e Clientes<span class="nav-mega-link-sub">Empresas que confiam em nós</span></span>
+                </a>
+                <a href="/equipe-de-recreadores-infantis-em-sao-paulo/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Nossa Equipe<span class="nav-mega-link-sub">Profissionais certificados e treinados</span></span>
+                </a>
+                <a href="/trabalhe-conosco/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Trabalhe Conosco<span class="nav-mega-link-sub">Vagas e oportunidades</span></span>
+                </a>
+                <a href="/contato/" class="nav-mega-link">
+                  <span class="nav-mega-link-text">Contato<span class="nav-mega-link-sub">Fale com nossa equipe comercial</span></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Blog -->
+        <li class="nav-item">
+          <a href="/blog/" class="nav-link-plain">Blog</a>
+        </li>
+
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a href="https://wa.me/5511984049485?text=Oi%2C%20quero%20um%20orcamento!" class="nav-wa" target="_blank" rel="noopener">
+        Orçamento WhatsApp →
+      </a>
+      <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false" id="btnHamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Overlay -->
+<div class="nav-mobile-overlay" id="navMobileOverlay" role="dialog" aria-label="Menu de navegacao" aria-modal="true">
+  <div class="nav-mobile-head">
+    <a href="/" class="nav-mobile-logo">Agita <span>Morango</span></a>
+    <button class="nav-mobile-close" id="btnMobileClose" aria-label="Fechar menu">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile-cta-wrap">
+    <a href="https://wa.me/5511984049485?text=Oi%2C%20quero%20um%20orcamento!" class="nav-mobile-cta-btn" target="_blank" rel="noopener">Orçamento WhatsApp →</a>
+  </div>
+  <ul class="nav-mobile-list">
+    <li><a href="/" class="nav-mobile-list-link">Início</a></li>
+    <li>
+      <button class="nav-mobile-list-link nav-mobile-trigger" aria-expanded="false" data-target="mob-festas">
+        Para Festas
+        <svg class="nav-mobile-caret" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 6 8 10 12 6"/></svg>
+      </button>
+      <ul class="nav-mobile-sub" id="mob-festas">
+        <li><a href="/aniversario-infantil-em-sao-paulo/" class="nav-mobile-sub-link">Aniversário Infantil</a></li>
+        <li><a href="/festas-tematicas-em-sao-paulo/" class="nav-mobile-sub-link">Festas Temáticas</a></li>
+        <li><a href="/festa-das-cores-em-sao-paulo/" class="nav-mobile-sub-link">Festa das Cores</a></li>
+        <li><a href="/festa-do-pijama-em-sao-paulo/" class="nav-mobile-sub-link">Festa do Pijama</a></li>
+        <li><a href="/colonia-de-ferias-infantil-sp/" class="nav-mobile-sub-link">Colônia de Férias</a></li>
+        <li><a href="/recreacao-a-domicilio-em-sao-paulo/" class="nav-mobile-sub-link">Recreação a Domicílio</a></li>
+        <li><a href="/espaco-baby-infantil-para-casamentos-em-sp/" class="nav-mobile-sub-link">Espaço Baby Casamentos</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="nav-mobile-list-link nav-mobile-trigger" aria-expanded="false" data-target="mob-empresas">
+        Para Empresas
+        <svg class="nav-mobile-caret" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 6 8 10 12 6"/></svg>
+      </button>
+      <ul class="nav-mobile-sub" id="mob-empresas">
+        <li><a href="/kids-day-corporativo-em-sao-paulo/" class="nav-mobile-sub-link">Kids Day Corporativo</a></li>
+        <li><a href="/family-day-corporativo-em-sao-paulo/" class="nav-mobile-sub-link">Family Day Corporativo</a></li>
+        <li><a href="/recreacao-corporativa-sp/" class="nav-mobile-sub-link">Recreação Corporativa</a></li>
+        <li><a href="/ativacoes-de-marca-com-criancas-em-sao-paulo/" class="nav-mobile-sub-link">Ativações de Marca</a></li>
+        <li><a href="/recreacao-infantil-corridas-de-rua-sp/" class="nav-mobile-sub-link">Recreação em Corridas de Rua</a></li>
+        <li><a href="/recreacao-infantil-para-escolas-sp/" class="nav-mobile-sub-link">Recreação para Escolas</a></li>
+        <li><a href="/recreacao-infantil-para-hoteis-sp/" class="nav-mobile-sub-link">Recreação para Hotéis</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="nav-mobile-list-link nav-mobile-trigger" aria-expanded="false" data-target="mob-servicos">
+        Serviços
+        <svg class="nav-mobile-caret" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 6 8 10 12 6"/></svg>
+      </button>
+      <ul class="nav-mobile-sub" id="mob-servicos">
+        <li><a href="/animacao-infantil-para-festas-em-sp/" class="nav-mobile-sub-link">Animação Infantil</a></li>
+        <li><a href="/dj-infantil-para-festas-em-sao-paulo/" class="nav-mobile-sub-link">DJ Infantil</a></li>
+        <li><a href="/baladinha-kids-e-dj-infantil-em-sao-paulo/" class="nav-mobile-sub-link">Baladinha Kids</a></li>
+        <li><a href="/show-musical-infantil-em-sao-paulo/" class="nav-mobile-sub-link">Show Musical</a></li>
+        <li><a href="/show-de-magica-infantil-em-sao-paulo/" class="nav-mobile-sub-link">Show de Mágica</a></li>
+        <li><a href="/personagens-para-festas-infantis-em-sao-paulo/" class="nav-mobile-sub-link">Personagens</a></li>
+        <li><a href="/espaco-baby-para-festa-sp/" class="nav-mobile-sub-link">Espaço Baby</a></li>
+        <li><a href="/camarim-infantil-para-festas-em-sao-paulo/" class="nav-mobile-sub-link">Camarim Infantil</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="nav-mobile-list-link nav-mobile-trigger" aria-expanded="false" data-target="mob-sobre">
+        Sobre Nós
+        <svg class="nav-mobile-caret" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 6 8 10 12 6"/></svg>
+      </button>
+      <ul class="nav-mobile-sub" id="mob-sobre">
+        <li><a href="/sobre/" class="nav-mobile-sub-link">Sobre a Agita Morango</a></li>
+        <li><a href="/cases-e-clientes-de-evento-infantil/" class="nav-mobile-sub-link">Cases e Clientes</a></li>
+        <li><a href="/equipe-de-recreadores-infantis-em-sao-paulo/" class="nav-mobile-sub-link">Nossa Equipe</a></li>
+        <li><a href="/trabalhe-conosco/" class="nav-mobile-sub-link">Trabalhe Conosco</a></li>
+        <li><a href="/contato/" class="nav-mobile-sub-link">Contato</a></li>
+      </ul>
+    </li>
+    <li><a href="/blog/" class="nav-mobile-list-link">Blog</a></li>
+  </ul>
+</div>
+<section class="hero" aria-labelledby="hero-h1">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">🎪 Animacao completa com imersao total no tema escolhido</div>
+      <h1 id="hero-h1">Festas Tematicas em Sao Paulo</h1>
+      <p class="hero-sub">Quando o tema e a festa. Personagens, brincadeiras, oficinas e repertorio musical totalmente alinhados ao universo escolhido pela crianca. Uma festa tematica de verdade, da entrada ate o parabens.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/5511984049485" class="btn-hero btn-hero-primary">Pedir Orcamento</a>
+        <a href="#temas" class="btn-hero btn-hero-outline">Ver Temas</a>
+      </div>
+    </div>
+    <div class="hero-card" aria-hidden="true">
+      <div class="hero-card-title">Por que tematica completa</div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-num">20+</div><div class="hero-stat-label">temas em catalogo</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-label">imersao no tema</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">15</div><div class="hero-stat-label">anos de experiencia</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">4.9</div><div class="hero-stat-label">avaliacao media</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li class="breadcrumb-sep" aria-hidden="true">›</li>
+      <li><a href="/empresa-de-recreacao-em-sao-paulo/">Servicos</a></li>
+      <li class="breadcrumb-sep" aria-hidden="true">›</li>
+      <li aria-current="page">Festas Tematicas</li>
+    </ol>
+  </div>
+</nav>
+
+<section aria-labelledby="oque-title">
+  <div class="section-inner">
+    <div class="section-label">O que torna uma festa tematica real</div>
+    <h2 id="oque-title" class="section-title">Animacao completa dentro do universo do tema</h2>
+    <div class="oque-grid">
+      <div class="oque-text">
+        <p>Uma festa tematica nao e apenas decoracao e bolo. O que transforma uma festa em experiencia imersiva e a animacao alinhada ao tema: personagens do universo escolhido, brincadeiras que fazem sentido dentro da historia e atividades que colocam a crianca como protagonista da aventura.</p>
+        <p>A Agita Morango desenvolve roteiros especificos por tema. Uma festa de safari nao tem as mesmas brincadeiras de uma festa de princesas ou de espaco sideral. Cada universo tem suas proprias dinamicas, vocabulario, personagens e momentos de emocao caracteristicos.</p>
+        <p>Temos mais de 20 temas em catalogo, com personagens caracterizados, brincadeiras pensadas para o universo, oficinas tematicas e repertorio musical curado. Temas exclusivos podem ser desenvolvidos sob medida com antecedencia de 45 dias.</p>
+      </div>
+      <div class="oque-img" role="img" aria-label="Criancas em festa tematica de safari com personagens e animadores da Agita Morango em SP">
+        <div class="oque-img-placeholder">Foto: Criancas vestidas de exploradores em festa tematica de safari com animadores da Agita Morango em Sao Paulo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cards-section" id="temas" aria-labelledby="cards-title">
+  <div class="section-inner">
+    <div class="section-label">Catalogo de temas</div>
+    <h2 id="cards-title" class="section-title">Temas de festa infantil mais contratados em SP</h2>
+    <p class="section-sub">Cada tema com personagem, brincadeiras, oficinas e musica especifica. Nao e decoracao, e imersao.</p>
+    <div class="cards-grid-4">
+      <div class="card"><div class="card-icon">👸</div><div class="card-title">Princesas</div><div class="card-text">Princesas do reino encantado, baile real, desfile de coroa e missoes magicas para salvar o reino.</div></div>
+      <div class="card"><div class="card-icon">🦁</div><div class="card-title">Safari e Aventura</div><div class="card-text">Exploradores, animais da selva, missao de observacao e trilha de descoberta com pistas e desafios.</div></div>
+      <div class="card"><div class="card-icon">🚀</div><div class="card-title">Espaco Sideral</div><div class="card-text">Astronautas, planetas, missao espacial com controle de lancamento e treinamento de exploradores galacticos.</div></div>
+      <div class="card"><div class="card-icon">🦸</div><div class="card-title">Super-herois</div><div class="card-text">Academia de herois com treinamento, missoes secretas e certificado de super-heroi oficial para cada convidado.</div></div>
+      <div class="card"><div class="card-icon">🎪</div><div class="card-title">Circo e Magia</div><div class="card-text">Malabarismo, equilibrio, ilusionismo e o grande espetaculo com as criancas como artistas do picadeiro.</div></div>
+      <div class="card"><div class="card-icon">🦄</div><div class="card-title">Unicornio e Magia</div><div class="card-text">Terras magicas, pocoes coloridas, glitter de poder e a saga de montar e cuidar do unicornio da festa.</div></div>
+      <div class="card"><div class="card-icon">🌊</div><div class="card-title">Fundo do Mar</div><div class="card-text">Mergulhadores, criaturas marinhas, mapa do tesouro subaquatico e construcao de aquarios artesanais.</div></div>
+      <div class="card"><div class="card-icon">🌈</div><div class="card-title">Tema exclusivo</div><div class="card-text">Desenvolvemos o roteiro de animacao para qualquer tema sob medida. Consulte com 45 dias de antecedencia.</div></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="dif-title">
+  <div class="section-inner">
+    <div class="section-label">O diferencial da Agita Morango</div>
+    <h2 id="dif-title" class="section-title">Por que a animacao tematica e diferente</h2>
+    <div class="dif-grid">
+      <div class="dif-card">
+        <div class="dif-icon">📖</div>
+        <div class="dif-title">Roteiro proprio por tema</div>
+        <div class="dif-text">Cada tema tem um arco narrativo: missao inicial, desenvolvimento com brincadeiras e desafio final. A crianca e o heroi da historia, nao so espectadora da festa.</div>
+      </div>
+      <div class="dif-card">
+        <div class="dif-icon">🎭</div>
+        <div class="dif-title">Personagens integrados</div>
+        <div class="dif-text">Os personagens nao sao separados da animacao. Eles integram as brincadeiras, conduzem missoes e interagem com todas as criancas durante todo o tempo na festa.</div>
+      </div>
+      <div class="dif-card">
+        <div class="dif-icon">🎓</div>
+        <div class="dif-title">Equipe treinada por tema</div>
+        <div class="dif-text">Nossos animadores passam por briefing especifico antes de cada festa tematica. Eles conhecem o universo do tema, o nome do aniversariante e os momentos-chave esperados pelos pais.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark-section" aria-labelledby="processo-title">
+  <div class="section-inner">
+    <div class="section-label">Como funciona</div>
+    <h2 id="processo-title" class="section-title section-title-white">Do tema escolhido a festa realizada</h2>
+    <p class="section-sub">Quatro etapas simples para a festa tematica perfeita.</p>
+    <div class="process-list">
+      <div class="process-item">
+        <div class="process-num">01</div>
+        <div class="process-content">
+          <div class="process-title">Escolha o tema e agende</div>
+          <div class="process-text">Voce escolhe o tema do catalogo ou nos conta a ideia do tema exclusivo. Definimos a data, numero de convidados e duracao da animacao.</div>
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">02</div>
+        <div class="process-content">
+          <div class="process-title">Briefing personalizado</div>
+          <div class="process-text">Enviamos um formulario com nome do aniversariante, historias favoritas, amigos especiais e preferencias. Tudo entra no roteiro da animacao.</div>
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">03</div>
+        <div class="process-content">
+          <div class="process-title">Equipe preparada chega na festa</div>
+          <div class="process-text">Animadores, personagem e todo o material tematico chegam com 30 minutos de antecedencia. Montagem rapida, sem estresse para o contratante.</div>
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">04</div>
+        <div class="process-content">
+          <div class="process-title">Animacao do inicio ao fim</div>
+          <div class="process-text">Do parabens a despedida, tudo alinhado ao tema escolhido. Criancas sorrindo, pais fotografando e momentos que ficam na memoria por muito tempo.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="depo-section" aria-labelledby="depo-title">
+  <div class="section-inner">
+    <div class="section-label">Quem ja contratou</div>
+    <h2 id="depo-title" class="section-title">O que os pais falam das festas tematicas</h2>
+    <div class="depo-grid">
+      <div class="depo-card">
+        <div class="depo-stars">★★★★★</div>
+        <div class="depo-text">"A festa de safari foi perfeita. Cada brincadeira tinha a ver com o tema, o personagem guia era incrivel e as criancas ficaram imersos do inicio ao fim. Nunca vi criancas tao engajadas."</div>
+        <div class="depo-author">Ana Paula S.</div>
+        <div class="depo-location">Aniversario 6 anos tema safari, Morumbi, SP</div>
+      </div>
+      <div class="depo-card">
+        <div class="depo-stars">★★★★★</div>
+        <div class="depo-text">"O roteiro da festa espacial tinha o nome do meu filho como astronauta chefe. Ele ficou orgulhoso do inicio ao fim. A academia de herois foi o momento mais esperado por todas as criancas."</div>
+        <div class="depo-author">Roberto K.</div>
+        <div class="depo-location">Aniversario 8 anos tema espaco, Santana, SP</div>
+      </div>
+      <div class="depo-card">
+        <div class="depo-stars">★★★★★</div>
+        <div class="depo-text">"Contratei um tema exclusivo de video game que nao estava no catalogo. A Agita Morango criou tudo do zero em 3 semanas e ficou melhor do que eu imaginava. Profissionalismo absurdo."</div>
+        <div class="depo-author">Fabiana R.</div>
+        <div class="depo-location">Aniversario 9 anos tema video game, Pinheiros, SP</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="faq-title">
+  <div class="section-inner">
+    <div class="section-label">Duvidas frequentes</div>
+    <h2 id="faq-title" class="section-title">Perguntas sobre festas tematicas</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          A Agita Morango adapta todas as atividades ao tema da festa?
+          <span class="faq-icon" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-answer" hidden>
+          Sim. Brincadeiras, gincanas, personagens, oficinas e ate o repertorio musical sao adaptados ao tema escolhido pela crianca, criando uma experiencia imersiva e coesa do inicio ao fim da festa.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          Quais os temas de festa mais procurados em Sao Paulo?
+          <span class="faq-icon" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-answer" hidden>
+          Os mais contratados sao princesas, safari, espaco sideral, circo, super-herois, fazendinha, fundo do mar e unicornio. Novos temas sao criados sob medida para solicitacoes especificas com antecedencia.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          Com quanta antecedencia devo contratar a animacao tematica?
+          <span class="faq-icon" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-answer" hidden>
+          Para temas em catalogo, recomendamos 15 a 30 dias de antecedencia. Para temas exclusivos, o ideal e 45 dias para desenvolvimento do roteiro e preparacao do material tematico personalizado.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          Qual a duracao da animacao tematica?
+          <span class="faq-icon" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-answer" hidden>
+          A duracao padrao e de 2 a 3 horas de animacao, conforme o pacote contratado. O roteiro tematico e distribuido ao longo do tempo com momentos de alta energia e momentos de atividades mais calmas.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+          A festa tematica inclui material e acessorios tematicos?
+          <span class="faq-icon" aria-hidden="true">▾</span>
+        </button>
+        <div class="faq-answer" hidden>
+          Sim, conforme o pacote. Materiais de oficinas tematicas, medalhas de conclusao de missao, certificados, fantasia parcial (capa, tiara, capacete) e acessorios sao incluidos nos pacotes completos.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" aria-labelledby="cta-title">
+  <div class="section-inner cta-inner">
+    <h2 id="cta-title" class="section-title section-title-white">Qual universo a crianca vai explorar na festa?</h2>
+    <p class="section-sub">Fale com a Agita Morango e monte a animacao tematica mais completa de Sao Paulo.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/5511984049485" class="btn-cta btn-cta-white">Chamar no WhatsApp</a>
+      <a href="/orcamento/" class="btn-cta btn-cta-outline">Solicitar Orcamento</a>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" aria-labelledby="form-title">
+  <div class="form-mesh" aria-hidden="true"></div>
+  <div class="form-noise" aria-hidden="true"></div>
+  <div class="form-inner">
+    <div class="form-copy">
+      <h2 id="form-title">Sua festa esta a uma mensagem de distancia.</h2>
+      <p>Responda 3 perguntas rapidas e a equipe entra em contato com um orcamento personalizado em ate 2 horas.</p>
+      <ul class="form-promises">
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Sem compromisso</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Resposta em ate 2 horas</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Proposta 100% personalizada</li>
+      </ul>
+    </div>
+    <div class="form-card">
+      <div class="form-dots" aria-hidden="true"><span class="form-dot active"></span><span class="form-dot"></span><span class="form-dot"></span><span class="form-dot"></span></div>
+      <div class="form-step active" data-step="1" id="ftStep1">
+        <p class="form-step-q">Qual tipo de evento?</p>
+        <div class="form-options">
+          <button class="form-option" onclick="ftSelect(this,'tipo','ftStep2')">Aniversario infantil</button>
+          <button class="form-option" onclick="ftSelect(this,'tipo','ftStep2')">Evento corporativo</button>
+          <button class="form-option" onclick="ftSelect(this,'tipo','ftStep2')">Festa escolar</button>
+          <button class="form-option" onclick="ftSelect(this,'tipo','ftStep2')">Outro</button>
+        </div>
+      </div>
+      <div class="form-step" data-step="2" id="ftStep2">
+        <p class="form-step-q">Quantas criancas participarao?</p>
+        <div class="form-options">
+          <button class="form-option" onclick="ftSelect(this,'criancas','ftStep3')">Ate 20</button>
+          <button class="form-option" onclick="ftSelect(this,'criancas','ftStep3')">21 a 50</button>
+          <button class="form-option" onclick="ftSelect(this,'criancas','ftStep3')">51 a 100</button>
+          <button class="form-option" onclick="ftSelect(this,'criancas','ftStep3')">Mais de 100</button>
+        </div>
+      </div>
+      <div class="form-step" data-step="3" id="ftStep3">
+        <p class="form-step-q">Quando sera o evento?</p>
+        <div class="form-options">
+          <button class="form-option" onclick="ftSelect(this,'quando','ftStep4')">Este mes</button>
+          <button class="form-option" onclick="ftSelect(this,'quando','ftStep4')">Proximo mes</button>
+          <button class="form-option" onclick="ftSelect(this,'quando','ftStep4')">Em 2 ou 3 meses</button>
+          <button class="form-option" onclick="ftSelect(this,'quando','ftStep4')">Ainda nao sei</button>
+        </div>
+      </div>
+      <div class="form-step" data-step="4" id="ftStep4">
+        <p class="form-step-q">Ultimo passo, como posso te chamar?</p>
+        <input class="form-input" type="text" id="ftNome" placeholder="Seu nome">
+        <input class="form-input" type="tel" id="ftWpp" placeholder="WhatsApp com DDD">
+        <div class="form-nav"><span></span><button class="btn-form-send" onclick="ftEnviar()">Receber orcamento no WhatsApp</button></div>
+      </div>
+      <div class="form-step" id="ftStep5">
+        <div class="form-confirm">
+          <p>Obrigado! Em breve a equipe entra em contato.</p>
+          <a href="https://wa.me/5511984049485" class="btn-form-send" style="display:inline-block;text-decoration:none">Abrir WhatsApp agora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section class="galeria-section" aria-labelledby="galeria-title">
+  <div class="container" style="max-width:960px;margin:0 auto">
+    <h2 id="galeria-title" class="section-title section-title-white">Festas Tematicas Agita Morango em Acao</h2>
+    <div class="galeria-track">
+      <div class="galeria-item" data-lb-type="image" data-lb-src="/assets/img/festas-tematicas-infantil-sp-01.jpg" data-lb-caption="Festas tematicas infantil SP" onclick="lbOpen(this)"><div class="galeria-item-inner"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Festas tematicas infantil SP</span></div><div class="galeria-overlay"><span>Ver foto</span></div></div>
+      <div class="galeria-item" data-lb-type="image" data-lb-src="/assets/img/decoracao-tematica-festa-infantil-02.jpg" data-lb-caption="Decoracao tematica festa infantil" onclick="lbOpen(this)"><div class="galeria-item-inner"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Decoracao tematica</span></div><div class="galeria-overlay"><span>Ver foto</span></div></div>
+      <div class="galeria-item" data-lb-type="video" data-lb-src="https://www.youtube.com/embed/dQw4w9WgXcQ" data-lb-caption="Video: Festas Tematicas Infantil" onclick="lbOpen(this)"><div class="galeria-item-inner"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg><span>Assistir video</span></div><div class="galeria-overlay"><span>Ver video</span></div></div>
+      <div class="galeria-item" data-lb-type="image" data-lb-src="/assets/img/animacao-festa-tematica-03.jpg" data-lb-caption="Animacao festa tematica" onclick="lbOpen(this)"><div class="galeria-item-inner"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Animacao festa tematica</span></div><div class="galeria-overlay"><span>Ver foto</span></div></div>
+      <div class="galeria-item" data-lb-type="image" data-lb-src="/assets/img/festas-tematicas-kids-day-04.jpg" data-lb-caption="Festas tematicas kids day" onclick="lbOpen(this)"><div class="galeria-item-inner"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Festas tematicas kids day</span></div><div class="galeria-overlay"><span>Ver foto</span></div></div>
+      <div class="galeria-item" data-lb-type="image" data-lb-src="/assets/img/bastidores-festa-tematica-05.jpg" data-lb-caption="Bastidores" onclick="lbOpen(this)"><div class="galeria-item-inner"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Bastidores</span></div><div class="galeria-overlay"><span>Ver foto</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPAMENTO -->
+<section class="equipamento-section" aria-labelledby="equip-title">
+  <div class="container" style="max-width:960px;margin:0 auto">
+    <span class="section-label">Estrutura</span>
+    <h2 id="equip-title" class="section-title">O que o profissional leva para o seu evento</h2>
+    <div class="equip-grid">
+      <div class="equip-card"><div class="equip-icon">🎭</div><h3 class="equip-title">Kit Tematico Completo</h3><p class="equip-text">Decoracao, aderecos e figurinos tematicos montados pela equipe no local do evento.</p></div>
+      <div class="equip-card"><div class="equip-icon">🔊</div><h3 class="equip-title">Som Profissional</h3><p class="equip-text">Caixas de som e playlist tematica para criar a atmosfera ideal para a festa.</p></div>
+      <div class="equip-card"><div class="equip-icon">🎮</div><h3 class="equip-title">Dinamicas e Brincadeiras</h3><p class="equip-text">Jogos e atividades interativas alinhados ao tema da festa, engajando todas as criancas.</p></div>
+      <div class="equip-card"><div class="equip-icon">📸</div><h3 class="equip-title">Props para Fotos</h3><p class="equip-text">Acessorios tematicos para fotos memoraveis com as criancas durante a festa.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- E-E-A-T -->
+<section class="eeat-section" aria-labelledby="eeat-title">
+  <div class="eeat-inner">
+    <h2 id="eeat-title" class="section-title">15 anos animando festas infantis em Sao Paulo</h2>
+    <div class="eeat-text">
+      <p>A Agita Morango e uma empresa especializada em recreacao e animacao infantil, fundada em 2009, com mais de 15 anos de historia em Sao Paulo e Grande SP.</p>
+      <p>As festas tematicas fazem parte do portfolio completo da Agita Morango, conduzidas por profissionais com dupla formacao: pedagogia ou artes cenicas e recreacao infantil. Conheca nossa <a href="/equipe-de-recreadores-infantis-em-sao-paulo/">equipe de recreadores</a>.</p>
+      <p>Todos os contratos incluem nota fiscal, seguro de responsabilidade civil e suporte completo antes, durante e apos o evento. A Agita Morango atende eventos particulares, corporativos e escolares em toda a Grande SP.</p>
+    </div>
+    <div class="eeat-stats">
+      <div class="eeat-stat"><strong>15+</strong><span>anos de experiencia</span></div>
+      <div class="eeat-stat"><strong>12k</strong><span>familias atendidas</span></div>
+      <div class="eeat-stat"><strong>4.9</strong><span>estrelas (620 reviews)</span></div>
+      <div class="eeat-stat"><strong>NF</strong><span>nota fiscal</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ONDE ESTAMOS -->
+<section class="onde-estamos" aria-labelledby="onde-title">
+  <div class="onde-mesh" aria-hidden="true"></div>
+  <div class="onde-inner">
+    <div class="onde-mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.678!2d-46.6388!3d-23.5489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c4f1f8b0b3%3A0x7f1e7e6b6b6b6b6b!2sRua+Imaculada%2C+291%2C+S%C3%A3o+Paulo!5e0!3m2!1spt!2sbr!4v1713567890123" width="100%" height="300" style="border:0;border-radius:14px;" allowfullscreen="" loading="lazy" title="Agita Morango no Google Maps"></iframe>
+    </div>
+    <div class="onde-text">
+      <span class="onde-eyebrow">Onde estamos</span>
+      <h2 id="onde-title">Baseados em SP, levamos festas tematicas para toda a Grande SP</h2>
+      <div class="onde-row"><div class="onde-row-icon">📍</div><div class="onde-row-info"><strong>Endereco</strong><span>Rua Imaculada, 291, Sao Paulo, SP</span></div></div>
+      <div class="onde-row"><div class="onde-row-icon">📱</div><div class="onde-row-info"><strong>WhatsApp</strong><span>(11) 98404-9485</span></div></div>
+      <div class="onde-row"><div class="onde-row-icon">🕐</div><div class="onde-row-info"><strong>Atendimento</strong><span>Seg. a Sab., das 9h as 18h</span></div></div>
+      <div class="onde-row"><div class="onde-row-icon">🗺️</div><div class="onde-row-info"><strong>Area de Atuacao</strong><span>Sao Paulo e Grande SP</span></div></div>
+      <div class="onde-cidades"><span class="onde-cidade-tag">Sao Paulo</span><span class="onde-cidade-tag">Guarulhos</span><span class="onde-cidade-tag">Osasco</span><span class="onde-cidade-tag">Alphaville</span><span class="onde-cidade-tag">Barueri</span><span class="onde-cidade-tag">ABC Paulista</span></div>
+      <a href="https://wa.me/5511984049485" class="btn-onde">Falar pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="rel-title">
+  <div class="section-inner">
+    <div class="section-label">Outros servicos</div>
+    <h2 id="rel-title" class="section-title">Servicos que integram a festa tematica</h2>
+    <div class="rel-grid">
+      <div class="rel-card">
+        <div class="rel-card-title">Personagens para Festas</div>
+        <div class="rel-card-text">Personagens caracterizados que se integram ao roteiro tematico, conduzindo missoes e interagindo com todas as criancas.</div>
+        <a href="/personagens-para-festas-infantis-em-sao-paulo/" class="rel-card-link">Conhecer servico →</a>
+      </div>
+      <div class="rel-card">
+        <div class="rel-card-title">Oficinas Criativas</div>
+        <div class="rel-card-text">Atividades manuais adaptadas ao tema da festa: pintura, argila, scrapbooking e criacao dentro do universo escolhido.</div>
+        <a href="/oficinas-criativas-infantis-em-sp/" class="rel-card-link">Conhecer servico →</a>
+      </div>
+      <div class="rel-card">
+        <div class="rel-card-title">Aniversario Infantil Completo</div>
+        <div class="rel-card-text">O pacote completo com animacao tematica, personagem, baladinha kids, espaco baby e muito mais, tudo no mesmo tema.</div>
+        <a href="/aniversario-infantil-em-sao-paulo/" class="rel-card-link">Ver pacotes →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div id="lbBackdrop" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;flex-direction:column;" role="dialog" aria-modal="true" aria-label="Visualizador de midia">
+  <button id="lbClose" onclick="lbClose()" style="position:absolute;top:16px;right:16px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;line-height:1" aria-label="Fechar">&times;</button>
+  <button id="lbPrev" onclick="lbNav(-1)" style="display:none;position:absolute;left:16px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);border:none;color:#fff;font-size:1.5rem;padding:12px 16px;border-radius:8px;cursor:pointer" aria-label="Anterior">&#8592;</button>
+  <button id="lbNext" onclick="lbNav(1)" style="display:none;position:absolute;right:16px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);border:none;color:#fff;font-size:1.5rem;padding:12px 16px;border-radius:8px;cursor:pointer" aria-label="Proximo">&#8594;</button>
+  <img id="lbImg" src="" alt="" style="max-width:90vw;max-height:75vh;border-radius:8px;display:block">
+  <iframe id="lbIframe" src="" style="display:none;width:80vw;height:60vh;border:none;border-radius:8px"></iframe>
+  <div style="margin-top:12px;text-align:center"><p id="lbCaption" style="color:#fff;font-size:.9rem;margin:0 0 4px"></p><p id="lbCounter" style="color:#aaa;font-size:.8rem;margin:0"></p></div>
+</div>
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand-col">
+      <a href="/" class="footer-logo">Agita <span>Morango</span></a>
+      <p class="footer-tagline">"Recreacao infantil premium em Sao Paulo. Desde 2011 transformando festas em memorias afetivas."</p>
+      <div class="footer-contato">
+        <p>Rua Imaculada, 291, Sao Paulo, SP</p>
+        <p>(11) 98404-9485</p>
+        <p>contato@agitamorango.com.br</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/agitamorango/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://www.facebook.com/agitamorango" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+        <a href="https://www.tiktok.com/@agitamorango" target="_blank" rel="noopener" aria-label="TikTok">TK</a>
+        <a href="https://www.linkedin.com/in/agitamorangorecreacaoparafestas/" target="_blank" rel="noopener" aria-label="LinkedIn">LI</a>
+        <a href="https://www.youtube.com/channel/UCTn9wiulgetsF7W7j-ogIEw" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Para Festas</h4>
+      <ul>
+        <li><a href="/aniversario-infantil-em-sao-paulo/">Aniversário Infantil</a></li>
+        <li><a href="/festas-tematicas-em-sao-paulo/">Festas Temáticas</a></li>
+        <li><a href="/festa-das-cores-em-sao-paulo/">Festa das Cores</a></li>
+        <li><a href="/festa-do-pijama-em-sao-paulo/">Festa do Pijama</a></li>
+        <li><a href="/colonia-de-ferias-infantil-sp/">Colônia de Férias</a></li>
+        <li><a href="/recreacao-a-domicilio-em-sao-paulo/">Recreação a Domicílio</a></li>
+        <li><a href="/espaco-baby-infantil-para-casamentos-em-sp/">Espaço Baby Casamentos</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Para Empresas</h4>
+      <ul>
+        <li><a href="/kids-day-corporativo-em-sao-paulo/">Kids Day Corporativo</a></li>
+        <li><a href="/family-day-corporativo-em-sao-paulo/">Family Day Corporativo</a></li>
+        <li><a href="/recreacao-corporativa-sp/">Recreação Corporativa</a></li>
+        <li><a href="/ativacoes-de-marca-com-criancas-em-sao-paulo/">Ativações de Marca</a></li>
+        <li><a href="/recreacao-infantil-corridas-de-rua-sp/">Recreação em Corridas</a></li>
+        <li><a href="/recreacao-infantil-para-escolas-sp/">Recreação para Escolas</a></li>
+        <li><a href="/recreacao-infantil-para-hoteis-sp/">Recreação para Hotéis</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="/animacao-infantil-para-festas-em-sp/">Animação Infantil</a></li>
+        <li><a href="/dj-infantil-para-festas-em-sao-paulo/">DJ Infantil</a></li>
+        <li><a href="/baladinha-kids-e-dj-infantil-em-sao-paulo/">Baladinha Kids</a></li>
+        <li><a href="/show-musical-infantil-em-sao-paulo/">Show Musical</a></li>
+        <li><a href="/show-de-magica-infantil-em-sao-paulo/">Show de Mágica</a></li>
+        <li><a href="/personagens-para-festas-infantis-em-sao-paulo/">Personagens</a></li>
+        <li><a href="/espaco-baby-para-festa-sp/">Espaço Baby</a></li>
+        <li><a href="/camarim-infantil-para-festas-em-sao-paulo/">Camarim Infantil</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Sobre Nós</h4>
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/sobre/">Sobre a Agita Morango</a></li>
+        <li><a href="/equipe-de-recreadores-infantis-em-sao-paulo/">Nossa Equipe</a></li>
+        <li><a href="/cases-e-clientes-de-evento-infantil/">Cases e Clientes</a></li>
+        <li><a href="/contato/">Contato</a></li>
+        <li><a href="/trabalhe-conosco/">Trabalhe Conosco</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer-wordmark" aria-hidden="true">Agita <span>Morango</span></p>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Agita Morango. Todos os direitos reservados.</p>
+    <p><a href="/politica-privacidade/">Politica de Privacidade</a></p>
+  </div>
+</footer>
+
+<a href="https://wa.me/5511984049485" class="whatsapp-float" aria-label="Chamar no WhatsApp">💬</a>
+<div class="sticky-cta">
+  <a href="https://wa.me/5511984049485">Pedir Orcamento no WhatsApp</a>
+</div>
+
+<script>
+  function toggleFaq(btn) {
+    var expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', !expanded);
+    var answer = btn.nextElementSibling;
+    if (expanded) { answer.hidden = true; } else { answer.hidden = false; }
+  }
+</script>
+<link rel="stylesheet" href="../mobile-patch.css">
+
+<script>
+  /* ── MEGAMENU JS ── */
+  (function() {
+    var hamburger = document.getElementById('btnHamburger');
+    var overlay   = document.getElementById('navMobileOverlay');
+    var closeBtn  = document.getElementById('btnMobileClose');
+
+    function openMobile() {
+      overlay.classList.add('open');
+      hamburger.setAttribute('aria-expanded','true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobile() {
+      overlay.classList.remove('open');
+      hamburger.setAttribute('aria-expanded','false');
+      document.body.style.overflow = '';
+    }
+    if (hamburger) hamburger.addEventListener('click', openMobile);
+    if (closeBtn)  closeBtn.addEventListener('click', closeMobile);
+
+    /* Mobile accordion */
+    document.querySelectorAll('.nav-mobile-trigger').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var targetId = btn.getAttribute('data-target');
+        var sub = document.getElementById(targetId);
+        var isOpen = btn.getAttribute('aria-expanded') === 'true';
+        /* fechar todos */
+        document.querySelectorAll('.nav-mobile-trigger').forEach(function(b) {
+          b.setAttribute('aria-expanded','false');
+        });
+        document.querySelectorAll('.nav-mobile-sub').forEach(function(s) {
+          s.classList.remove('open');
+        });
+        if (!isOpen && sub) {
+          btn.setAttribute('aria-expanded','true');
+          sub.classList.add('open');
+        }
+      });
+    });
+
+    /* Desktop dropdown */
+    var dropdownItems = document.querySelectorAll('.nav-item-dropdown');
+
+    function closeAll() {
+      dropdownItems.forEach(function(li) {
+        li.classList.remove('is-open');
+        var btn = li.querySelector('.nav-link-trigger');
+        var panel = li.querySelector('.nav-dropdown');
+        if (btn) btn.setAttribute('aria-expanded','false');
+        if (panel) panel.classList.remove('is-open');
+      });
+    }
+
+    function openDropdown(li) {
+      closeAll();
+      li.classList.add('is-open');
+      var btn = li.querySelector('.nav-link-trigger');
+      var panel = li.querySelector('.nav-dropdown');
+      if (btn) btn.setAttribute('aria-expanded','true');
+      if (panel) panel.classList.add('is-open');
+    }
+
+    dropdownItems.forEach(function(li) {
+      var trigger = li.querySelector('.nav-link-trigger');
+      if (!trigger) return;
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (li.classList.contains('is-open')) { closeAll(); } else { openDropdown(li); }
+      });
+      li.addEventListener('mouseenter', function() { openDropdown(li); });
+      li.addEventListener('mouseleave', function() { closeAll(); });
+    });
+
+    document.addEventListener('click', function() { closeAll(); });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') { closeAll(); closeMobile(); }
+    });
+  })();
+
+  /* ── FORM JS ── */
+  var ftData = {};
+  function ftSelect(el, field, nextStep) {
+    ftData[field] = el.textContent.trim();
+    var current = el.closest('.form-step');
+    if (current) current.classList.remove('active');
+    var next = document.getElementById(nextStep);
+    if (next) next.classList.add('active');
+    var dots = document.querySelectorAll('.form-dot');
+    var step = parseInt(nextStep.replace('ftStep', ''));
+    dots.forEach(function(d, i) { d.classList.toggle('active', i < step - 1); });
+  }
+  function ftEnviar() {
+    var nome = document.getElementById('ftNome').value.trim();
+    var wpp = document.getElementById('ftWpp').value.trim();
+    if (!nome || !wpp) { alert('Preencha nome e WhatsApp.'); return; }
+    document.getElementById('ftStep4').classList.remove('active');
+    document.getElementById('ftStep5').classList.add('active');
+    var msg = encodeURIComponent('Oi! Quero saber mais sobre festas tematicas infantis. Tipo: ' + (ftData.tipo||'') + '. Criancas: ' + (ftData.criancas||'') + '. Quando: ' + (ftData.quando||'') + '. Nome: ' + nome);
+    window.open('https://wa.me/5511984049485?text=' + msg, '_blank');
+  }
+
+  /* ── LIGHTBOX JS ── */
+  var lbItems = [], lbIndex = 0;
+  function lbBuild() { lbItems = Array.from(document.querySelectorAll('.galeria-item[data-lb-type]')); }
+  function lbShow(idx) {
+    if (!lbItems.length) lbBuild();
+    lbIndex = (idx + lbItems.length) % lbItems.length;
+    var el = lbItems[lbIndex];
+    var type = el.dataset.lbType;
+    var bd = document.getElementById('lbBackdrop');
+    document.getElementById('lbCaption').textContent = el.dataset.lbCaption || '';
+    document.getElementById('lbCounter').textContent = (lbIndex + 1) + ' / ' + lbItems.length;
+    var img = document.getElementById('lbImg');
+    var ifr = document.getElementById('lbIframe');
+    if (type === 'video') { img.style.display = 'none'; ifr.style.display = 'block'; ifr.src = el.dataset.lbSrc; }
+    else { ifr.style.display = 'none'; ifr.src = ''; img.style.display = 'block'; img.src = el.dataset.lbSrc; img.alt = el.dataset.lbCaption || ''; }
+    document.getElementById('lbPrev').style.display = lbItems.length > 1 ? 'flex' : 'none';
+    document.getElementById('lbNext').style.display = lbItems.length > 1 ? 'flex' : 'none';
+    bd.style.display = 'flex'; document.body.style.overflow = 'hidden';
+  }
+  function lbOpen(el) { if (!lbItems.length) lbBuild(); lbShow(lbItems.indexOf(el)); }
+  function lbNav(dir) { lbShow(lbIndex + dir); }
+  function lbClose() {
+    var bd = document.getElementById('lbBackdrop');
+    bd.style.display = 'none'; document.body.style.overflow = '';
+    var ifr = document.getElementById('lbIframe'); ifr.src = ''; ifr.style.display = 'none';
+    document.getElementById('lbImg').style.display = 'block';
+  }
+  document.addEventListener('keydown', function(e) {
+    var bd = document.getElementById('lbBackdrop');
+    if (bd.style.display === 'none') return;
+    if (e.key === 'Escape') lbClose();
+    if (e.key === 'ArrowLeft') lbNav(-1);
+    if (e.key === 'ArrowRight') lbNav(1);
+  });
+</script>
+</body>
+</html>
