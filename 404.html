@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina Nao Encontrada | Agita Morango</title>
+  <meta name="description" content="A pagina que voce procura nao existe ou foi movida. Volte para a home da Agita Morango.">
+  <meta name="robots" content="noindex, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lora:ital,wght@0,400;0,600;1,400&family=League+Spartan:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --verde: #4aa702; --verde-escuro: #3d8c02; --vermelho: #9d0505;
+      --areia: #e6dfd1; --carvao: #2e2e2e; --carvao-deep: #1a1a1a;
+      --titulo: 'League Spartan', sans-serif;
+      --corpo: 'Bree Serif', serif; --editorial: 'Lora', serif;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    html, body { height: 100%; }
+    body { font-family: var(--corpo); color: var(--carvao); background: #fff; -webkit-font-smoothing: antialiased; display: flex; flex-direction: column; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 32px; border-radius: 100px;
+      font-family: var(--titulo); font-weight: 800; font-size: 0.95rem;
+      letter-spacing: 0.4px; transition: transform .35s var(--ease-out), box-shadow .35s var(--ease-out);
+      cursor: pointer; border: none; white-space: nowrap;
+      position: relative; overflow: hidden;
+    }
+    .btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent); transition: left .55s; }
+    @media (hover: hover) { .btn:hover::before { left: 100%; } .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(0,0,0,.22); } }
+    .btn-verde { background: var(--verde); color: #fff; }
+    .btn-ghost { background: transparent; color: var(--carvao); border: 2px solid var(--carvao); }
+
+    .nav { background: #fff; border-bottom: 3px solid var(--verde); box-shadow: 0 2px 12px rgba(0,0,0,.06); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 64px; max-width: 1160px; margin: 0 auto; }
+    .nav-logo { font-family: var(--titulo); font-weight: 900; font-size: 1.3rem; color: var(--verde); letter-spacing: -0.5px; }
+    .nav-logo span { color: var(--vermelho); }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { font-family: var(--titulo); font-weight: 700; font-size: 0.85rem; color: var(--carvao); text-transform: uppercase; transition: color .18s; }
+    .nav-links a:hover { color: var(--verde); }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--carvao); border-radius: 2px; }
+    .nav-drawer { display: none; position: fixed; inset: 0; z-index: 300; }
+    .nav-drawer.open { display: block; }
+    .nav-drawer-overlay { position: absolute; inset: 0; background: rgba(0,0,0,.5); }
+    .nav-drawer-panel { position: absolute; right: 0; top: 0; bottom: 0; width: 280px; background: #fff; padding: 28px 24px; display: flex; flex-direction: column; gap: 6px; }
+    .nav-drawer-close { align-self: flex-end; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--carvao); margin-bottom: 12px; }
+    .nav-drawer-panel a { font-family: var(--titulo); font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.3px; padding: 10px 0; border-bottom: 1px solid #eee; color: var(--carvao); }
+    .nav-drawer-panel .btn { margin-top: 16px; justify-content: center; }
+
+    /* 404 MAIN */
+    .notfound-main {
+      flex: 1;
+      display: flex; align-items: center; justify-content: center;
+      padding: 60px 24px;
+      background: linear-gradient(160deg, #f8fff4 0%, #fff 50%, #fff8f8 100%);
+      position: relative; overflow: hidden;
+    }
+    .notfound-bg {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      font-size: clamp(200px, 40vw, 400px);
+      font-family: var(--titulo); font-weight: 900;
+      color: rgba(74, 167, 2, 0.06); line-height: 1;
+      user-select: none; pointer-events: none; white-space: nowrap;
+    }
+    .notfound-content { text-align: center; position: relative; z-index: 1; max-width: 560px; }
+    .notfound-emoji {
+      font-size: clamp(4rem, 10vw, 7rem);
+      display: block; margin-bottom: 24px;
+      animation: bounce-idle 2.5s var(--ease-spring) infinite;
+    }
+    @keyframes bounce-idle {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+    }
+    @media (prefers-reduced-motion: reduce) { .notfound-emoji { animation: none; } }
+    .notfound-code { font-family: var(--titulo); font-weight: 900; font-size: 1rem; letter-spacing: 4px; text-transform: uppercase; color: var(--verde); margin-bottom: 12px; display: block; }
+    .notfound-content h1 { font-family: var(--titulo); font-weight: 900; font-size: clamp(1.8rem, 5vw, 3rem); color: var(--carvao); margin-bottom: 16px; line-height: 1.15; }
+    .notfound-content p { font-family: var(--editorial); font-style: italic; font-size: 1.1rem; color: #666; line-height: 1.7; margin-bottom: 36px; }
+    .notfound-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    .notfound-links { margin-top: 48px; }
+    .notfound-links-title { font-family: var(--titulo); font-weight: 700; font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: #aaa; margin-bottom: 16px; }
+    .notfound-quick-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .quick-link {
+      font-family: var(--titulo); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.5px;
+      padding: 8px 18px; border-radius: 100px; background: var(--areia); color: var(--carvao);
+      transition: background .2s, color .2s;
+    }
+    @media (hover: hover) { .quick-link:hover { background: var(--verde); color: #fff; } }
+
+    footer { background: var(--carvao); color: rgba(255,255,255,.75); padding: 28px 0; }
+    .footer-bottom-simple { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-logo { font-family: var(--titulo); font-weight: 900; font-size: 1.1rem; color: #fff; }
+    .footer-logo span { color: var(--verde); }
+    .footer-bottom-simple p { font-size: 0.82rem; }
+
+    @media (max-width: 820px) { .nav-links { display: none; } .nav-hamburger { display: flex; } }
+    @media (max-width: 480px) { .notfound-actions { flex-direction: column; align-items: center; } }
+  </style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Menu principal">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Agita<span>Morango</span></a>
+    <ul class="nav-links">
+      <li><a href="/">Início</a></li>
+      <li><a href="/sobre/">Sobre</a></li>
+      <li><a href="/animacao-infantil-para-festas-em-sp/">Serviços</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/faq/">FAQ</a></li>
+      <li><a href="/contato/">Contato</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-drawer" id="drawer">
+  <div class="nav-drawer-overlay" id="drawer-overlay"></div>
+  <div class="nav-drawer-panel">
+    <button class="nav-drawer-close" id="drawer-close">✕</button>
+    <a href="/">Início</a><a href="/sobre/">Sobre</a><a href="/animacao-infantil-para-festas-em-sp/">Serviços</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/contato/">Contato</a>
+    <a href="/orcamento/" class="btn btn-verde">Pedir Orçamento</a>
+  </div>
+</div>
+
+<main class="notfound-main" role="main">
+  <div class="notfound-bg" aria-hidden="true">404</div>
+  <div class="notfound-content">
+    <span class="notfound-emoji" role="img" aria-label="Crianca olhando ao redor">🙈</span>
+    <span class="notfound-code">Erro 404</span>
+    <h1>Ops! Essa Pagina Sumiu na Brincadeira</h1>
+    <p>A pagina que voce procura nao foi encontrada. Talvez ela tenha sido movida, renomeada ou nunca tenha existido. Mas a festa continua!</p>
+    <div class="notfound-actions">
+      <a href="/" class="btn btn-verde">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Voltar para Home
+      </a>
+      <a href="/orcamento/" class="btn btn-ghost">Pedir Orcamento</a>
+    </div>
+    <div class="notfound-links">
+      <p class="notfound-links-title">Paginas mais visitadas</p>
+      <div class="notfound-quick-links">
+        <a href="/animacao-infantil-para-festas-em-sp/" class="quick-link">Animacao Infantil</a>
+        <a href="/equipe-de-recreadores-infantis-em-sao-paulo/" class="quick-link">Recreadores</a>
+        <a href="/baladinha-kids-e-dj-infantil-em-sao-paulo/" class="quick-link">Baladinha Kids</a>
+        <a href="/recreacao-corporativa-sp/" class="quick-link">Corporativo</a>
+        <a href="/faq/" class="quick-link">FAQ</a>
+        <a href="/contato/" class="quick-link">Contato</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom-simple">
+      <div class="footer-logo">Agita<span>Morango</span></div>
+      <p>&copy; 2026 Agita Morango. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  
+</script>
+</body>
+</html>

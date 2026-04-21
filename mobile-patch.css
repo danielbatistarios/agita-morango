@@ -1,0 +1,251 @@
+/* ================================================
+   MOBILE PATCH — index.html (Agita Morango Home)
+   Gerado por /mobile-review em 2026-04-19
+   Score antes: 62/100 | Estimativa após: 84/100
+   P0: 2 fixes | P1: 9 fixes | P2: 3 fixes
+   ================================================ */
+
+/* ── P0: Hamburger touch target mínimo 44×44px ── */
+.nav-hamburger {
+  padding: 10px;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .nav-hamburger { display: flex; }
+}
+
+/* ── P0: Cards grid — 2 colunas já em tablet (768px) ── */
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── P1: scroll-padding-top — compensar nav sticky 64px ── */
+html {
+  scroll-padding-top: 72px;
+}
+
+/* ── P1: Padding de seções — reduzir em mobile ── */
+@media (max-width: 640px) {
+  .servicos,
+  .galeria,
+  .blog-preview,
+  .depoimentos {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+  .metodologia {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+  .onde-estamos {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .faq {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .cta-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .trust-bar {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  .clientes-b2b {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+/* ── P1: Hero padding mobile ── */
+@media (max-width: 640px) {
+  .hero-inner {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+}
+
+/* ── P1: Font-sizes abaixo de 12px — elevar mínimo ── */
+@media (max-width: 640px) {
+  .blog-tag,
+  .onde-cidade-tag,
+  .section-eyebrow,
+  .hero-eyebrow,
+  .cta-step-label,
+  .galeria-item-inner span,
+  .blog-meta,
+  .card-link,
+  .servico-pill {
+    font-size: 0.75rem;
+  }
+  .footer-bottom p,
+  .depo-meta {
+    font-size: 0.78rem;
+  }
+}
+
+/* ── P1: Letter-spacing excessivo em mobile — reduzir ── */
+@media (max-width: 640px) {
+  .hero-eyebrow,
+  .section-eyebrow,
+  .cta-step-label {
+    letter-spacing: 1.2px;
+  }
+}
+
+/* ── P1: Hover sem condição — isolar para dispositivos com mouse ── */
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-6px) rotateX(4deg);
+    box-shadow: 0 20px 48px rgba(0,0,0,.15);
+  }
+  .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0,0,0,.12);
+  }
+  .depo-card:hover {
+    transform: translateY(-4px);
+  }
+  .galeria-item:hover .galeria-item-inner {
+    transform: scale(1.04);
+  }
+  .galeria-item:hover .galeria-overlay {
+    opacity: 1;
+  }
+  .galeria-item:hover .galeria-play-btn {
+    background: var(--verde);
+    border-color: var(--verde);
+    transform: scale(1.12);
+  }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(0,0,0,.22);
+  }
+  .btn-verde:hover {
+    box-shadow: 0 12px 32px rgba(74,167,2,.35);
+  }
+  .btn-vermelho:hover {
+    box-shadow: 0 12px 32px rgba(157,5,5,.4);
+  }
+  .cta-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 48px rgba(0,0,0,.30);
+  }
+}
+
+/* Em touch: usar :active como feedback tátil */
+@media (hover: none) {
+  .card:active { transform: scale(0.98); }
+  .btn:active { transform: scale(0.97); }
+  .blog-card:active { opacity: 0.92; }
+}
+
+/* ── P1: prefers-reduced-motion — desabilitar animações decorativas ── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-blob,
+  .hero-blob-2 {
+    will-change: auto;
+    animation: none !important;
+    transform: none !important;
+  }
+  .onde-mesh {
+    animation: none !important;
+  }
+  .cta-mesh {
+    animation: none !important;
+  }
+  .marquee-track {
+    animation-duration: 60s;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ── P1: Footer social icons — elevar para 44×44px ── */
+.footer-social a {
+  width: 44px;
+  height: 44px;
+}
+
+/* ── P1: Drawer links — padding vertical maior para touch ── */
+.nav-drawer-panel a {
+  padding: 13px 0;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* ── P2: line-height no body ── */
+body {
+  line-height: 1.6;
+}
+
+/* ── P2: Trust bar mobile — 2x2 mais espaçado em 375px ── */
+@media (max-width: 480px) {
+  .trust-bar-inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 100%;
+  }
+  .stat-num {
+    font-size: 2rem;
+  }
+}
+
+/* ── P2: FAQ deco text — não overflow em mobile ── */
+@media (max-width: 640px) {
+  .faq-deco {
+    font-size: clamp(5rem, 40vw, 12rem);
+    opacity: 0.6;
+  }
+}
+
+/* ── P2: Metodologia img — não muito alta em mobile ── */
+@media (max-width: 640px) {
+  .metodologia-img {
+    aspect-ratio: 16/9;
+    max-height: 260px;
+  }
+}
+
+/* ── P2: Onde estamos mapa — altura adequada em mobile ── */
+@media (max-width: 640px) {
+  .onde-mapa {
+    aspect-ratio: 4/3;
+  }
+}
+
+/* ── PATCH v2: Hover complement — selectors not in initial patch ── */
+@media (hover: hover) {
+  .btn:hover::before { left: 100%; }
+  .hero-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.15); }
+  .marquee-track:hover { animation-play-state: paused; }
+  .marquee-item:hover img { opacity: 1; }
+  .servico-pill:hover { opacity: 0.85; transform: translateY(-1px); }
+  .lb-close:hover { background: rgba(255,255,255,.25); }
+  .lb-arrow:hover { background: rgba(255,255,255,.22); }
+  .onde-row:hover .onde-icon { background: rgba(74,167,2,.28); }
+  .onde-row-text a:hover { color: var(--verde); }
+  .blog-ler:hover { gap: 8px; }
+  .cta-opt:hover { opacity: 0.9; transform: translateY(-1px); }
+  .footer-col ul li a:hover { color: var(--verde); }
+  .footer-social a:hover { background: var(--verde); color: #fff; border-color: var(--verde); }
+  .footer-bottom a:hover { color: var(--verde); }
+  .nav-links a:hover { color: var(--verde); }
+  .nav-drawer-panel a:hover { color: var(--verde); }
+  .card-link:hover { gap: 8px; }
+}
+
+@media (hover: none) {
+  .marquee-track:hover { animation-play-state: running; }
+}
