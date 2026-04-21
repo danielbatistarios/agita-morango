@@ -327,6 +327,20 @@
     #lbBackdrop[style*="display: none"] { display: none !important; }
     #lbImg { max-width: 90vw; max-height: 75vh; }
     #lbIframe { width: 80vw; height: 60vh; }
+
+    /* SAZONAIS HUB */
+    .sazonais-section { background: var(--cinza-claro); padding: 80px 24px; }
+    .sazonais-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; margin-top: 2.5rem; }
+    .sazonais-card { display: flex; align-items: flex-start; gap: 1rem; background: #fff; border-radius: var(--radius); padding: 1.25rem 1.5rem; border: 1px solid var(--cinza-medio); border-left: 4px solid var(--verde); transition: transform 0.18s, box-shadow 0.18s; }
+    .sazonais-card:hover { transform: translateY(-3px); box-shadow: var(--sombra); }
+    .sazonais-icon { font-size: 2rem; flex-shrink: 0; line-height: 1; }
+    .sazonais-content { display: flex; flex-direction: column; gap: 0.3rem; }
+    .sazonais-name { font-family: 'League Spartan', sans-serif; font-weight: 900; font-size: 1rem; color: var(--carvao); }
+    .sazonais-desc { font-size: 0.82rem; color: #666; line-height: 1.5; }
+    .sazonais-link { font-family: 'League Spartan', sans-serif; font-weight: 700; font-size: 0.78rem; color: var(--verde-dark); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 0.25rem; }
+    @media (max-width: 600px) {
+      .sazonais-grid { grid-template-columns: 1fr; }
+    }
   </style>
   <script type="application/ld+json">
   [
@@ -535,7 +549,7 @@
                   <span class="nav-mega-link-text">Camarim Infantil<span class="nav-mega-link-sub">Maquiagem artística e caracterização</span></span>
                 </a>
                 <div class="nav-mega-arrow-row">
-                  <a href="/animacao-infantil-para-festas-em-sp/" class="nav-mega-arrow">Ver todos os serviços</a>
+                  <a href="/servicos-extras-para-festa-infantil-sp/" class="nav-mega-arrow">Ver todos os serviços extras</a>
                 </div>
               </div>
             </div>
@@ -833,6 +847,116 @@
   </div>
 </section>
 
+<section class="sazonais-section" aria-labelledby="sazonais-title">
+  <div class="section-inner">
+    <div class="section-label">Datas especiais e temporadas</div>
+    <h2 id="sazonais-title" class="section-title">Festas tematicas por ocasiao do ano</h2>
+    <p class="section-sub">Cada data do calendario tem um roteiro especifico de animacao. Explore as paginas completas de cada ocasiao com atividades, personagens e detalhes exclusivos.</p>
+    <div class="sazonais-grid">
+
+      <a href="/festa-junina-infantil-em-sao-paulo/" class="sazonais-card" aria-label="Ver festa junina infantil em SP">
+        <div class="sazonais-icon">🌽</div>
+        <div class="sazonais-content">
+          <div class="sazonais-name">Festa Junina</div>
+          <div class="sazonais-desc">Quadrilha infantil, pescaria, argola, forró e personagens caipiras com roteiro completo de arraial.</div>
+          <span class="sazonais-link">Ver festa junina infantil →</span>
+        </div>
+      </a>
+
+      <a href="/carnaval-infantil-em-sao-paulo/" class="sazonais-card" aria-label="Ver carnaval infantil em SP">
+        <div class="sazonais-icon">🎭</div>
+        <div class="sazonais-content">
+          <div class="sazonais-name">Carnaval Infantil</div>
+          <div class="sazonais-desc">Escola de samba kids, confecao de fantasias, desfile e musica ao vivo adaptada para criancas de todas as idades.</div>
+          <span class="sazonais-link">Ver carnaval infantil →</span>
+        </div>
+      </a>
+
+      <a href="/halloween-para-festas-e-eventos-em-sao-paulo/" class="sazonais-card" aria-label="Ver halloween para festas e eventos">
+        <div class="sazonais-icon">🎃</div>
+        <div class="sazonais-content">
+          <div class="sazonais-name">Halloween</div>
+          <div class="sazonais-desc">Casa assombrada kids, trick-or-treat, personagens sombrios com humor e gincanas de terror suave para criancas.</div>
+          <span class="sazonais-link">Ver Halloween para festas →</span>
+        </div>
+      </a>
+
+      <a href="/natal-infantil-para-festas-e-eventos-em-sao-paulo/" class="sazonais-card" aria-label="Ver natal infantil para festas">
+        <div class="sazonais-icon">🎄</div>
+        <div class="sazonais-content">
+          <div class="sazonais-name">Natal Infantil</div>
+          <div class="sazonais-desc">Papai Noel ao vivo, oficina de presentes, missao de ajudante do Noel e musica de natal interativa.</div>
+          <span class="sazonais-link">Ver natal infantil para festas →</span>
+        </div>
+      </a>
+
+      <a href="/pascoa-para-festas-e-eventos-em-sao-paulo/" class="sazonais-card" aria-label="Ver pascoa para festas e eventos">
+        <div class="sazonais-icon">🐣</div>
+        <div class="sazonais-content">
+          <div class="sazonais-name">Pascoa</div>
+          <div class="sazonais-desc">Cacada aos ovos, coelho da Pascoa ao vivo, confecao de chocolate e gincanas sazonais para turmas de todas as idades.</div>
+          <span class="sazonais-link">Ver Pascoa para festas →</span>
+        </div>
+      </a>
+
+      <a href="/festa-de-ano-novo-infantil-em-sao-paulo/" class="sazonais-card" aria-label="Ver festa de ano novo infantil">
+        <div class="sazonais-icon">🎆</div>
+        <div class="sazonais-content">
+          <div class="sazonais-name">Ano Novo Infantil</div>
+          <div class="sazonais-desc">Contagem regressiva kids, metas do ano, capsula do tempo e celebracao com musica e confete para encerrar o ano com estilo.</div>
+          <span class="sazonais-link">Ver festa de ano novo infantil →</span>
+        </div>
+      </a>
+
+      <a href="/dia-das-criancas-em-sao-paulo/" class="sazonais-card" aria-label="Ver programacao para o Dia das Criancas">
+        <div class="sazonais-icon">🎈</div>
+        <div class="sazonais-content">
+          <div class="sazonais-name">Dia das Criancas</div>
+          <div class="sazonais-desc">Programacao completa para o 12 de outubro com animacao tematica, gincanas especiais e presentes surpresa inclusos.</div>
+          <span class="sazonais-link">Ver programacao Dia das Criancas →</span>
+        </div>
+      </a>
+
+      <a href="/recreacao-copa-do-mundo-infantil-sp/" class="sazonais-card" aria-label="Ver recreacao Copa do Mundo infantil">
+        <div class="sazonais-icon">⚽</div>
+        <div class="sazonais-content">
+          <div class="sazonais-name">Copa do Mundo Kids</div>
+          <div class="sazonais-desc">Torneio de futebol kids, pintura de rosto com cores dos paises, torcida organizada e cerimonias de premiacao.</div>
+          <span class="sazonais-link">Ver recreacao Copa do Mundo →</span>
+        </div>
+      </a>
+
+      <a href="/festa-das-cores-em-sao-paulo/" class="sazonais-card" aria-label="Ver festa das cores em SP">
+        <div class="sazonais-icon">🌈</div>
+        <div class="sazonais-content">
+          <div class="sazonais-name">Festa das Cores</div>
+          <div class="sazonais-desc">Batalha de cores, pintura corporal, experiencias sensoriais coloridas e atividades de arte para criancas de todas as idades.</div>
+          <span class="sazonais-link">Ver festa das cores em SP →</span>
+        </div>
+      </a>
+
+      <a href="/festa-do-pijama-em-sao-paulo/" class="sazonais-card" aria-label="Ver festa do pijama em SP">
+        <div class="sazonais-icon">🌙</div>
+        <div class="sazonais-content">
+          <div class="sazonais-name">Festa do Pijama</div>
+          <div class="sazonais-desc">Sessao de filmes, concurso de pijama, almofadadas e brincadeiras de noite com energia controlada para um encerramento tranquilo.</div>
+          <span class="sazonais-link">Ver festa do pijama em SP →</span>
+        </div>
+      </a>
+
+      <a href="/aniversarios-e-festas-infantis-em-sao-paulo/" class="sazonais-card" aria-label="Ver aniversarios e festas infantis em SP">
+        <div class="sazonais-icon">🎂</div>
+        <div class="sazonais-content">
+          <div class="sazonais-name">Aniversários e Festas Infantis</div>
+          <div class="sazonais-desc">Planejamento completo de aniversarios infantis com roteiro, equipe especializada e pacotes personalizados para cada faixa etaria.</div>
+          <span class="sazonais-link">Ver aniversarios e festas infantis →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 <section aria-labelledby="faq-title">
   <div class="section-inner">
     <div class="section-label">Duvidas frequentes</div>
@@ -1121,6 +1245,7 @@
         <li><a href="/sobre/">Sobre a Agita Morango</a></li>
         <li><a href="/equipe-de-recreadores-infantis-em-sao-paulo/">Nossa Equipe</a></li>
         <li><a href="/cases-e-clientes-de-evento-infantil/">Cases e Clientes</a></li>
+        <li><a href="/clientes/">Clientes</a></li>
         <li><a href="/contato/">Contato</a></li>
         <li><a href="/trabalhe-conosco/">Trabalhe Conosco</a></li>
       </ul>
@@ -1129,7 +1254,7 @@
   <p class="footer-wordmark" aria-hidden="true">Agita <span>Morango</span></p>
   <div class="footer-bottom">
     <p>&copy; 2026 Agita Morango. Todos os direitos reservados.</p>
-    <p><a href="/politica-privacidade/">Politica de Privacidade</a></p>
+    <p><a href="/politica-privacidade/">Politica de Privacidade</a> &nbsp;|&nbsp; <a href="/termos-de-uso/">Termos de Uso</a></p>
   </div>
 </footer>
 

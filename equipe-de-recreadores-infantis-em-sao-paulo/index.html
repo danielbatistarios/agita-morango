@@ -498,23 +498,7 @@
     @media (hover: hover) { .gal-item:hover::after { background: rgba(26,26,26,0.4); } }
 
     /* LIGHTBOX */
-    #lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.92);
-      z-index: 2000;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
-    #lightbox.open { display: flex; }
-    #lb-img { max-width: 90vw; max-height: 80vh; border-radius: 8px; object-fit: contain; }
-    #lb-caption { color: rgba(255,255,255,0.7); font-family: var(--fonte-corpo); font-style: italic; font-size: 0.9rem; margin-top: 12px; }
-    .lb-close { position: absolute; top: 20px; right: 24px; background: none; border: none; color: var(--branco); font-size: 2rem; cursor: pointer; }
-    .lb-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.1); border: none; color: var(--branco); font-size: 1.5rem; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; }
-    .lb-nav.prev { left: 12px; }
-    .lb-nav.next { right: 12px; }
+    /* (Styles moved to inline) */
 
     /* ===== EQUIP ===== */
     .equip-grid {
@@ -1054,7 +1038,7 @@
                   <span class="nav-mega-link-text">Camarim Infantil<span class="nav-mega-link-sub">Maquiagem artística e caracterização</span></span>
                 </a>
                 <div class="nav-mega-arrow-row">
-                  <a href="/animacao-infantil-para-festas-em-sp/" class="nav-mega-arrow">Ver todos os serviços</a>
+                  <a href="/servicos-extras-para-festa-infantil-sp/" class="nav-mega-arrow">Ver todos os serviços extras</a>
                 </div>
               </div>
             </div>
@@ -1536,22 +1520,22 @@
         <p class="label">Complete sua festa</p>
         <h2 class="h2-title" id="rel-h2">Servicos que combinam com a equipe de recreadores</h2>
         <div class="rel-grid">
-          <a href="/animacao-infantil-para-festas-em-sp/" class="rel-card">
+          <a href="/animacao-infantil-para-festas-em-sp/" class="rel-card" aria-label="Ver animacao infantil para festas">
             <h3>Animacao Infantil</h3>
             <p>Show, gincanas e personagens conduzidos pela nossa equipe formada.</p>
             <span class="rel-arrow">Ver servico →</span>
           </a>
-          <a href="/baladinha-kids-e-dj-infantil-em-sao-paulo/" class="rel-card">
+          <a href="/baladinha-kids-e-dj-infantil-em-sao-paulo/" class="rel-card" aria-label="Ver baladinha kids e DJ">
             <h3>Baladinha Kids e DJ</h3>
             <p>DJ infantil especializado para transformar a festa em uma pista kids.</p>
             <span class="rel-arrow">Ver servico →</span>
           </a>
-          <a href="/espaco-baby-para-festa-sp/" class="rel-card">
+          <a href="/espaco-baby-para-festa-sp/" class="rel-card" aria-label="Ver Espaco Baby para festas">
             <h3>Espaco Baby</h3>
             <p>Monitoras especializadas para bebes e criancas de 0 a 3 anos.</p>
             <span class="rel-arrow">Ver servico →</span>
           </a>
-          <a href="/camarim-infantil-para-festas-em-sao-paulo/" class="rel-card">
+          <a href="/camarim-infantil-para-festas-em-sao-paulo/" class="rel-card" aria-label="Ver camarim infantil para festas">
             <h3>Camarim Infantil</h3>
             <p>Maquiagem e fantasia kids com produtos hipoalergenicos certificados.</p>
             <span class="rel-arrow">Ver servico →</span>
@@ -1741,6 +1725,7 @@
         <li><a href="/sobre/">Sobre a Agita Morango</a></li>
         <li><a href="/equipe-de-recreadores-infantis-em-sao-paulo/">Nossa Equipe</a></li>
         <li><a href="/cases-e-clientes-de-evento-infantil/">Cases e Clientes</a></li>
+        <li><a href="/clientes/">Clientes</a></li>
         <li><a href="/contato/">Contato</a></li>
         <li><a href="/trabalhe-conosco/">Trabalhe Conosco</a></li>
       </ul>
@@ -1749,18 +1734,22 @@
   <p class="footer-wordmark" aria-hidden="true">Agita <span>Morango</span></p>
   <div class="footer-bottom">
     <p>&copy; 2026 Agita Morango. Todos os direitos reservados.</p>
-    <p><a href="/politica-privacidade/">Politica de Privacidade</a></p>
+    <p><a href="/politica-privacidade/">Politica de Privacidade</a> &nbsp;|&nbsp; <a href="/termos-de-uso/">Termos de Uso</a></p>
   </div>
 </footer>
 
-  <!-- LIGHTBOX -->
-  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada" onclick="lbBgClose(event)">
-    <button class="lb-close" onclick="lbClose()" aria-label="Fechar">&#215;</button>
-    <button class="lb-nav prev" onclick="lbNav(-1)" aria-label="Anterior">&#8249;</button>
-    <img id="lb-img" src="" alt="">
-    <p id="lb-caption"></p>
-    <button class="lb-nav next" onclick="lbNav(1)" aria-label="Proxima">&#8250;</button>
+<!-- LIGHTBOX -->
+<div id="lbBackdrop" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:9999;align-items:center;justify-content:center;flex-direction:column;gap:1rem;padding:1rem;" onclick="lbClose()" aria-modal="true" role="dialog">
+  <button onclick="lbClose()" style="position:fixed;top:1rem;right:1.25rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;width:40px;height:40px;border-radius:50%;font-size:1.4rem;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10001;transition:background .2s;" aria-label="Fechar" onmouseenter="this.style.background='rgba(255,255,255,.25)'" onmouseleave="this.style.background='rgba(255,255,255,.1)'">&times;</button>
+  <button id="lbPrev" onclick="event.stopPropagation();lbNav(-1)" style="position:fixed;left:1rem;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;width:48px;height:48px;border-radius:50%;font-size:1.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10001;transition:background .2s;" aria-label="Anterior" onmouseenter="this.style.background='rgba(255,255,255,.25)'" onmouseleave="this.style.background='rgba(255,255,255,.1)'">&#8249;</button>
+  <img id="lbImg" src="" alt="" style="max-width:90vw;max-height:78vh;border-radius:8px;object-fit:contain;user-select:none;" onclick="event.stopPropagation()">
+  <iframe id="lbIframe" src="" style="display:none;width:min(860px,90vw);aspect-ratio:16/9;border:none;border-radius:8px;" allow="autoplay;encrypted-media" allowfullscreen onclick="event.stopPropagation()"></iframe>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:4px;" onclick="event.stopPropagation()">
+    <p id="lbCaption" style="color:#ccc;font-family:'Bree Serif',serif;font-size:.88rem;text-align:center;max-width:600px;"></p>
+    <p id="lbCounter" style="color:rgba(255,255,255,.35);font-family:'League Spartan',sans-serif;font-size:.72rem;letter-spacing:1px;"></p>
   </div>
+  <button id="lbNext" onclick="event.stopPropagation();lbNav(1)" style="position:fixed;right:1rem;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;width:48px;height:48px;border-radius:50%;font-size:1.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10001;transition:background .2s;" aria-label="Proxima" onmouseenter="this.style.background='rgba(255,255,255,.25)'" onmouseleave="this.style.background='rgba(255,255,255,.1)'">&#8250;</button>
+</div>
 
   <!-- FLOAT WA -->
   <a href="https://wa.me/5511984049485" class="float-wa" aria-label="WhatsApp Agita Morango">💬</a>
@@ -1831,38 +1820,25 @@
     };
 
     /* LIGHTBOX */
-    var lbItems = [];
-    var lbIdx = 0;
-    window.lbOpen = function(el) {
-      lbItems = Array.from(document.querySelectorAll('.gal-item'));
-      lbIdx = lbItems.indexOf(el);
-      lbShow(lbIdx);
-      document.getElementById('lightbox').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    };
-    function lbShow(i) {
-      var item = lbItems[i];
-      document.getElementById('lb-img').src = item.getAttribute('data-lb-src') || '';
-      document.getElementById('lb-img').alt = item.querySelector('img') ? item.querySelector('img').alt : '';
-      document.getElementById('lb-caption').textContent = item.getAttribute('data-lb-caption') || '';
+    var lbItems = [], lbIndex = 0;
+    function lbBuild() { lbItems = Array.from(document.querySelectorAll('.gal-item[data-lb-type],.galeria-item[data-lb-type]')); }
+    function lbShow(idx) {
+      if (!lbItems.length) lbBuild();
+      lbIndex = (idx + lbItems.length) % lbItems.length;
+      var el = lbItems[lbIndex], type = el.dataset.lbType, src = el.dataset.lbSrc, caption = el.dataset.lbCaption || '';
+      var img = document.getElementById('lbImg'), ifr = document.getElementById('lbIframe');
+      if (type === 'video') { img.style.display='none'; ifr.style.display='block'; ifr.src=src; }
+      else { ifr.style.display='none'; ifr.src=''; img.style.display='block'; img.src=src; img.alt=caption; }
+      document.getElementById('lbCaption').textContent = caption;
+      var ctr = document.getElementById('lbCounter'); if (ctr) ctr.textContent = (lbIndex+1)+' / '+lbItems.length;
+      var p=document.getElementById('lbPrev'), n=document.getElementById('lbNext');
+      if(p) p.style.display=lbItems.length>1?'flex':'none';
+      if(n) n.style.display=lbItems.length>1?'flex':'none';
     }
-    window.lbClose = function() {
-      document.getElementById('lightbox').classList.remove('open');
-      document.body.style.overflow = '';
-    };
-    window.lbBgClose = function(e) {
-      if (e.target === document.getElementById('lightbox')) lbClose();
-    };
-    window.lbNav = function(dir) {
-      lbIdx = (lbIdx + dir + lbItems.length) % lbItems.length;
-      lbShow(lbIdx);
-    };
-    document.addEventListener('keydown', function(e) {
-      if (!document.getElementById('lightbox').classList.contains('open')) return;
-      if (e.key === 'Escape') lbClose();
-      if (e.key === 'ArrowLeft') lbNav(-1);
-      if (e.key === 'ArrowRight') lbNav(1);
-    });
+    function lbOpen(el) { if(!lbItems.length) lbBuild(); var idx=lbItems.indexOf(el); if(idx===-1) idx=0; var bd=document.getElementById('lbBackdrop'); bd.style.display='flex'; document.body.style.overflow='hidden'; lbShow(idx); }
+    function lbNav(dir) { lbShow(lbIndex+dir); }
+    function lbClose() { var bd=document.getElementById('lbBackdrop'); bd.style.display='none'; document.body.style.overflow=''; var ifr=document.getElementById('lbIframe'); if(ifr){ifr.src='';ifr.style.display='none';} }
+    document.addEventListener('keydown', function(e) { var bd=document.getElementById('lbBackdrop'); if(bd.style.display==='none') return; if(e.key==='Escape') lbClose(); if(e.key==='ArrowLeft') lbNav(-1); if(e.key==='ArrowRight') lbNav(1); });
 
     /* FORM MULTISTEP */
     var formData = {};

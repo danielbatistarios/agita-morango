@@ -292,6 +292,27 @@
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
       margin-top: 48px;
     }
+    /* HUB VERTICAIS */
+    .verticais-hub { background: var(--carvao-deep); padding: 80px 24px; }
+    .verticais-hub .section-eyebrow { color: var(--verde); }
+    .verticais-hub .section-header h2 { color: #fff; }
+    .verticais-hub .section-header p { color: rgba(255,255,255,.65); }
+    .verticais-hub .verticais-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .vertical-hub-card {
+      display: flex; flex-direction: column; gap: 0.75rem;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      border-top: 3px solid var(--verde);
+      border-radius: 12px; padding: 1.25rem 1.25rem 1.5rem;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .vertical-hub-card:hover { background: rgba(255,255,255,.1); transform: translateY(-3px); }
+    .vhc-icon { font-size: 1.8rem; line-height: 1; }
+    .vhc-body { display: flex; flex-direction: column; gap: 0.3rem; }
+    .vhc-name { font-family: var(--titulo); font-weight: 900; font-size: 0.92rem; color: #fff; }
+    .vhc-desc { font-size: 0.8rem; color: rgba(255,255,255,.6); line-height: 1.5; }
+    .vhc-link { font-family: var(--titulo); font-weight: 700; font-size: 0.75rem; color: var(--verde); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 0.5rem; }
+    @media (max-width: 900px) { .verticais-hub .verticais-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 540px) { .verticais-hub .verticais-grid { grid-template-columns: 1fr; } }
     .vertical-card {
       background: #fff; border-top: 4px solid var(--verde);
       border-radius: 16px; padding: 32px 28px;
@@ -726,7 +747,7 @@
                   <span class="nav-mega-link-text">Camarim Infantil<span class="nav-mega-link-sub">Maquiagem artística e caracterização</span></span>
                 </a>
                 <div class="nav-mega-arrow-row">
-                  <a href="/animacao-infantil-para-festas-em-sp/" class="nav-mega-arrow">Ver todos os serviços</a>
+                  <a href="/servicos-extras-para-festa-infantil-sp/" class="nav-mega-arrow">Ver todos os serviços extras</a>
                 </div>
               </div>
             </div>
@@ -1152,6 +1173,205 @@
       </div>
     </section>
 
+    <!-- GALERIA -->
+    <section class="galeria-section" id="galeria-section" style="padding:60px 20px;background:#1a1a2e;">
+      <div style="max-width:1100px;margin:0 auto;">
+        <h2 style="font-size:clamp(1.4rem,3vw,2rem);color:#fff;margin-bottom:8px;font-weight:700;text-align:center;">Recreacao Corporativa Agita Morango em Acao</h2>
+        <p style="color:rgba(255,255,255,.7);margin-bottom:32px;text-align:center;">Veja como transformamos eventos corporativos em experiencias memoraveis para familias e criancas.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">
+          <div class="galeria-item" data-lb-type="image" data-lb-src="/images/recreacao-corporativa-kids-day-sp-01.jpg" data-lb-caption="Kids Day corporativo com estacoes tematicas" onclick="lbOpen(this)" style="flex:0 0 calc(33.333% - 11px);height:220px;border-radius:12px;overflow:hidden;cursor:pointer;position:relative;background:#2a2a4e;display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;color:rgba(255,255,255,.6);padding:20px;"><svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24" style="margin-bottom:8px;display:block;margin-left:auto;margin-right:auto;"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg><span style="font-size:.85rem;">Kids Day corporativo</span></div>
+          </div>
+          <div class="galeria-item" data-lb-type="image" data-lb-src="/images/recreacao-corporativa-family-day-sp-02.jpg" data-lb-caption="Family Day com atividades para todas as idades" onclick="lbOpen(this)" style="flex:0 0 calc(33.333% - 11px);height:220px;border-radius:12px;overflow:hidden;cursor:pointer;position:relative;background:#2a2a4e;display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;color:rgba(255,255,255,.6);padding:20px;"><svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24" style="margin-bottom:8px;display:block;margin-left:auto;margin-right:auto;"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg><span style="font-size:.85rem;">Family Day com criancas</span></div>
+          </div>
+          <div class="galeria-item" data-lb-type="image" data-lb-src="/images/recreacao-corporativa-ativacao-marca-sp-03.jpg" data-lb-caption="Ativacao de marca com criancas em evento corporativo" onclick="lbOpen(this)" style="flex:0 0 calc(33.333% - 11px);height:220px;border-radius:12px;overflow:hidden;cursor:pointer;position:relative;background:#2a2a4e;display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;color:rgba(255,255,255,.6);padding:20px;"><svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24" style="margin-bottom:8px;display:block;margin-left:auto;margin-right:auto;"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg><span style="font-size:.85rem;">Ativacao de marca</span></div>
+          </div>
+          <div class="galeria-item" data-lb-type="image" data-lb-src="/images/recreacao-corporativa-confraternizacao-sp-04.jpg" data-lb-caption="Confraternizacao corporativa com espaco kids" onclick="lbOpen(this)" style="flex:0 0 calc(33.333% - 11px);height:220px;border-radius:12px;overflow:hidden;cursor:pointer;position:relative;background:#2a2a4e;display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;color:rgba(255,255,255,.6);padding:20px;"><svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24" style="margin-bottom:8px;display:block;margin-left:auto;margin-right:auto;"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg><span style="font-size:.85rem;">Espaco kids corporativo</span></div>
+          </div>
+          <div class="galeria-item" data-lb-type="image" data-lb-src="/images/recreacao-corporativa-equipe-sp-05.jpg" data-lb-caption="Equipe especializada em eventos corporativos" onclick="lbOpen(this)" style="flex:0 0 calc(33.333% - 11px);height:220px;border-radius:12px;overflow:hidden;cursor:pointer;position:relative;background:#2a2a4e;display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;color:rgba(255,255,255,.6);padding:20px;"><svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24" style="margin-bottom:8px;display:block;margin-left:auto;margin-right:auto;"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg><span style="font-size:.85rem;">Equipe recreacao corporativa</span></div>
+          </div>
+          <div class="galeria-item" data-lb-type="image" data-lb-src="/images/recreacao-corporativa-resultados-sp-06.jpg" data-lb-caption="Resultados e engajamento em eventos corporativos com criancas" onclick="lbOpen(this)" style="flex:0 0 calc(33.333% - 11px);height:220px;border-radius:12px;overflow:hidden;cursor:pointer;position:relative;background:#2a2a4e;display:flex;align-items:center;justify-content:center;">
+            <div style="text-align:center;color:rgba(255,255,255,.6);padding:20px;"><svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24" style="margin-bottom:8px;display:block;margin-left:auto;margin-right:auto;"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg><span style="font-size:.85rem;">Resultados corporativos</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="form-section" id="form-section" style="padding:60px 20px;background:linear-gradient(135deg,#0a1628 0%,#1a2d4a 100%);">
+      <div style="max-width:600px;margin:0 auto;text-align:center;">
+        <h2 id="form-title" style="font-size:clamp(1.4rem,3vw,2rem);color:#fff;margin-bottom:12px;font-weight:700;">Seu evento corporativo a uma mensagem de distancia</h2>
+        <p style="color:rgba(255,255,255,.8);margin-bottom:32px;">Preencha abaixo e receba uma proposta personalizada em ate 2 horas.</p>
+        <div id="rcStep1" style="background:rgba(255,255,255,.08);border-radius:16px;padding:32px;border:1px solid rgba(255,255,255,.15);">
+          <p style="font-weight:600;color:#fff;margin-bottom:20px;">Qual tipo de evento voce esta planejando?</p>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <button onclick="rcNextStep(2,'Kids Day')" style="padding:14px 20px;border:1px solid rgba(255,255,255,.3);border-radius:10px;background:rgba(255,255,255,.05);cursor:pointer;font-size:1rem;color:#fff;text-align:left;transition:all .2s;">🏢 Kids Day / Family Day</button>
+            <button onclick="rcNextStep(2,'Evento de marca')" style="padding:14px 20px;border:1px solid rgba(255,255,255,.3);border-radius:10px;background:rgba(255,255,255,.05);cursor:pointer;font-size:1rem;color:#fff;text-align:left;transition:all .2s;">🎯 Ativacao de marca</button>
+            <button onclick="rcNextStep(2,'Confraternizacao')" style="padding:14px 20px;border:1px solid rgba(255,255,255,.3);border-radius:10px;background:rgba(255,255,255,.05);cursor:pointer;font-size:1rem;color:#fff;text-align:left;transition:all .2s;">🎉 Confraternizacao corporativa</button>
+            <button onclick="rcNextStep(2,'Outro')" style="padding:14px 20px;border:1px solid rgba(255,255,255,.3);border-radius:10px;background:rgba(255,255,255,.05);cursor:pointer;font-size:1rem;color:#fff;text-align:left;transition:all .2s;">📋 Outro tipo de evento</button>
+          </div>
+        </div>
+        <div id="rcStep2" style="display:none;background:rgba(255,255,255,.08);border-radius:16px;padding:32px;border:1px solid rgba(255,255,255,.15);">
+          <p style="font-weight:600;color:#fff;margin-bottom:20px;">Quantas criancas participarao?</p>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <button onclick="rcNextStep(3,'ate 30')" style="padding:14px 20px;border:1px solid rgba(255,255,255,.3);border-radius:10px;background:rgba(255,255,255,.05);cursor:pointer;font-size:1rem;color:#fff;text-align:left;transition:all .2s;">👶 Ate 30 criancas</button>
+            <button onclick="rcNextStep(3,'30 a 80')" style="padding:14px 20px;border:1px solid rgba(255,255,255,.3);border-radius:10px;background:rgba(255,255,255,.05);cursor:pointer;font-size:1rem;color:#fff;text-align:left;transition:all .2s;">👦 De 30 a 80 criancas</button>
+            <button onclick="rcNextStep(3,'mais de 80')" style="padding:14px 20px;border:1px solid rgba(255,255,255,.3);border-radius:10px;background:rgba(255,255,255,.05);cursor:pointer;font-size:1rem;color:#fff;text-align:left;transition:all .2s;">🎉 Mais de 80 criancas</button>
+          </div>
+        </div>
+        <div id="rcStep3" style="display:none;background:rgba(255,255,255,.08);border-radius:16px;padding:32px;border:1px solid rgba(255,255,255,.15);">
+          <p style="font-weight:600;color:#fff;margin-bottom:20px;">Otimo! Fale com nosso time comercial:</p>
+          <p style="color:rgba(255,255,255,.7);margin-bottom:24px;" id="rcSummary"></p>
+          <a href="https://wa.me/5511984049485" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;padding:16px 32px;border-radius:50px;font-weight:700;font-size:1.1rem;text-decoration:none;">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Falar com o time
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- E-E-A-T -->
+    <section class="eeat-section" id="eeat-section" style="padding:60px 20px;background:#fff;">
+      <div style="max-width:900px;margin:0 auto;text-align:center;">
+        <h2 id="eeat-title" style="font-size:clamp(1.4rem,3vw,2rem);color:#1a1a1a;margin-bottom:24px;font-weight:700;">15 anos animando festas infantis em Sao Paulo</h2>
+        <p style="color:#444;margin-bottom:16px;font-size:1.05rem;line-height:1.7;">A Agita Morango nasceu em 2009 com uma missao simples: transformar festas infantis em memorias que as criancas guardam para sempre. Em mais de 15 anos animando eventos em Sao Paulo e Grande SP, desenvolvemos um metodo proprio que combina recreacao pedagogica, animacao tematica e gestao de equipe treinada.</p>
+        <p style="color:#444;margin-bottom:16px;font-size:1.05rem;line-height:1.7;">Nossa equipe de <a href="/equipe-de-recreadores-infantis-em-sao-paulo/" style="color:#d63d6e;font-weight:600;">recreadores certificados</a> passa por selecao rigorosa e treinamento continuo em desenvolvimento infantil, primeiros socorros e gestao de grupos. Cada profissional conhece as etapas do desenvolvimento da crianca e adapta as atividades para cada faixa etaria, garantindo seguranca e diversao em igual medida.</p>
+        <p style="color:#444;margin-bottom:32px;font-size:1.05rem;line-height:1.7;">Ja atendemos mais de 12.000 familias, com nota media de 4,9 estrelas no Google. Emitimos nota fiscal em 100% dos contratos e temos registro na Secretaria Municipal de Educacao de Sao Paulo.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;">
+          <div style="background:#f5f5f5;border-radius:12px;padding:20px 28px;min-width:140px;text-align:center;"><span style="font-size:2rem;font-weight:700;color:#1a3a6b;display:block;">15+</span><span style="font-size:0.85rem;color:#666;">anos de experiencia</span></div>
+          <div style="background:#f5f5f5;border-radius:12px;padding:20px 28px;min-width:140px;text-align:center;"><span style="font-size:2rem;font-weight:700;color:#1a3a6b;display:block;">12k</span><span style="font-size:0.85rem;color:#666;">familias atendidas</span></div>
+          <div style="background:#f5f5f5;border-radius:12px;padding:20px 28px;min-width:140px;text-align:center;"><span style="font-size:2rem;font-weight:700;color:#1a3a6b;display:block;">4,9★</span><span style="font-size:0.85rem;color:#666;">nota no Google</span></div>
+          <div style="background:#f5f5f5;border-radius:12px;padding:20px 28px;min-width:140px;text-align:center;"><span style="font-size:2rem;font-weight:700;color:#1a3a6b;display:block;">NF</span><span style="font-size:0.85rem;color:#666;">100% dos contratos</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HUB VERTICAIS B2B -->
+    <section class="verticais-hub" aria-labelledby="h2-hub-verticais">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Verticais Corporativas</span>
+          <h2 id="h2-hub-verticais">Todas as soluções de recreação B2B da Agita Morango</h2>
+          <p>Cada vertical tem equipe, material e roteiro especifico. Explore e solicite orçamento por tipo de evento.</p>
+        </div>
+        <div class="verticais-grid">
+
+          <a href="/kids-day-corporativo-em-sao-paulo/" class="vertical-hub-card" aria-label="Ver Kids Day corporativo">
+            <div class="vhc-icon">👶</div>
+            <div class="vhc-body">
+              <div class="vhc-name">Kids Day Corporativo</div>
+              <div class="vhc-desc">Evento dedicado para filhos de colaboradores com animacao completa, personagens e atividades por faixa etaria.</div>
+              <span class="vhc-link">Ver Kids Day corporativo →</span>
+            </div>
+          </a>
+
+          <a href="/kids-day-e-family-day-corporativo-em-sao-paulo/" class="vertical-hub-card" aria-label="Ver Kids Day e Family Day corporativo">
+            <div class="vhc-icon">👨‍👩‍👧</div>
+            <div class="vhc-body">
+              <div class="vhc-name">Kids Day + Family Day</div>
+              <div class="vhc-desc">Programacao que inclui criancas e adultos no mesmo evento corporativo. Atividades integradas e separadas por publico.</div>
+              <span class="vhc-link">Ver Kids Day e Family Day →</span>
+            </div>
+          </a>
+
+          <a href="/family-day-corporativo-em-sao-paulo/" class="vertical-hub-card" aria-label="Ver Family Day corporativo">
+            <div class="vhc-icon">🏡</div>
+            <div class="vhc-body">
+              <div class="vhc-name">Family Day Corporativo</div>
+              <div class="vhc-desc">Celebracao de colaboradores com familia. Recreacao infantil paralela as atividades dos adultos para aproveitamento total do evento.</div>
+              <span class="vhc-link">Ver Family Day corporativo →</span>
+            </div>
+          </a>
+
+          <a href="/eventos-infantis-para-empresas-em-sao-paulo/" class="vertical-hub-card" aria-label="Ver eventos infantis para empresas">
+            <div class="vhc-icon">🏢</div>
+            <div class="vhc-body">
+              <div class="vhc-name">Eventos Infantis para Empresas</div>
+              <div class="vhc-desc">Solucoes personalizadas de recreacao para qualquer tipo de evento corporativo que inclua criancas no publico.</div>
+              <span class="vhc-link">Ver eventos infantis para empresas →</span>
+            </div>
+          </a>
+
+          <a href="/ativacoes-de-marca-com-criancas-em-sao-paulo/" class="vertical-hub-card" aria-label="Ver ativacoes de marca com criancas">
+            <div class="vhc-icon">🎯</div>
+            <div class="vhc-body">
+              <div class="vhc-name">Ativacoes de Marca</div>
+              <div class="vhc-desc">Engajamento de familias em lancamentos de produto, feiras, inauguracoes e eventos de marca com criancas.</div>
+              <span class="vhc-link">Ver ativacoes de marca →</span>
+            </div>
+          </a>
+
+          <a href="/ativacoes-de-marca-experiencias-sensoriais-sp/" class="vertical-hub-card" aria-label="Ver ativacoes sensoriais para marcas">
+            <div class="vhc-icon">🎨</div>
+            <div class="vhc-body">
+              <div class="vhc-name">Experiencias Sensoriais</div>
+              <div class="vhc-desc">Ativacoes imersivas com elementos sensoriais: textura, cor, som e movimento para conexao emocional de criancas com a marca.</div>
+              <span class="vhc-link">Ver experiencias sensoriais →</span>
+            </div>
+          </a>
+
+          <a href="/recreacao-infantil-corridas-de-rua-sp/" class="vertical-hub-card" aria-label="Ver recreacao em corridas de rua">
+            <div class="vhc-icon">🏃</div>
+            <div class="vhc-body">
+              <div class="vhc-name">Corridas de Rua</div>
+              <div class="vhc-desc">Kids zone estruturada para eventos esportivos: circuito infantil, brincadeiras atleticas e cuidados enquanto os pais correm.</div>
+              <span class="vhc-link">Ver recreacao em corridas →</span>
+            </div>
+          </a>
+
+          <a href="/recreacao-infantil-para-escolas-sp/" class="vertical-hub-card" aria-label="Ver recreacao infantil para escolas">
+            <div class="vhc-icon">🏫</div>
+            <div class="vhc-body">
+              <div class="vhc-name">Recreacao para Escolas</div>
+              <div class="vhc-desc">Suporte de recreacao para festas juninas, formaturas, gincanas escolares e eventos de encerramento de ano letivo.</div>
+              <span class="vhc-link">Ver recreacao para escolas →</span>
+            </div>
+          </a>
+
+          <a href="/recreacao-infantil-para-hoteis-sp/" class="vertical-hub-card" aria-label="Ver recreacao infantil para hoteis">
+            <div class="vhc-icon">🏨</div>
+            <div class="vhc-body">
+              <div class="vhc-name">Recreacao para Hoteis</div>
+              <div class="vhc-desc">Mini clube com programacao diaria, animadores treinados e atividades para criancas hospedadas enquanto os pais descansam.</div>
+              <span class="vhc-link">Ver recreacao para hoteis →</span>
+            </div>
+          </a>
+
+          <a href="/terceirizacao-recreacao-infantil-sp/" class="vertical-hub-card" aria-label="Ver terceirizacao de recreacao infantil">
+            <div class="vhc-icon">🤝</div>
+            <div class="vhc-body">
+              <div class="vhc-name">Terceirizacao de Recreacao</div>
+              <div class="vhc-desc">Contratacao recorrente de equipe de recreadores para espaco fixo. Escolas, hoteis, clubes e condomínios com contrato mensal.</div>
+              <span class="vhc-link">Ver terceirizacao →</span>
+            </div>
+          </a>
+
+          <a href="/colonia-de-ferias-infantil-sp/" class="vertical-hub-card" aria-label="Ver colonia de ferias infantil">
+            <div class="vhc-icon">☀️</div>
+            <div class="vhc-body">
+              <div class="vhc-name">Colonia de Ferias</div>
+              <div class="vhc-desc">Programacao de ferias escolares com roteiro diario de atividades tematicas, oficinas e momentos de recreacao livre.</div>
+              <span class="vhc-link">Ver colonia de ferias →</span>
+            </div>
+          </a>
+
+          <a href="/kids-day-e-family-day-em-sao-paulo/" class="vertical-hub-card" aria-label="Ver Kids Day e Family Day">
+            <div class="vhc-icon">🎪</div>
+            <div class="vhc-body">
+              <div class="vhc-name">Kids Day e Family Day SP</div>
+              <div class="vhc-desc">Versao voltada ao publico geral de SP: eventos de confraternizacao com recreacao infantil completa em espacos da cidade.</div>
+              <span class="vhc-link">Ver Kids Day e Family Day em SP →</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ -->
     <section class="faq-section" aria-labelledby="h2-faq">
       <div class="container">
@@ -1261,6 +1481,15 @@
 
   </main>
 
+  <div id="lbBackdrop" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;flex-direction:column;" role="dialog" aria-modal="true" aria-label="Visualizador de midia">
+    <button id="lbClose" onclick="lbClose()" style="position:absolute;top:18px;right:24px;background:none;border:none;color:#fff;font-size:2.2rem;cursor:pointer;line-height:1;" aria-label="Fechar">&times;</button>
+    <button id="lbPrev" onclick="lbNav(-1)" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);border:none;color:#fff;font-size:2rem;border-radius:50%;width:48px;height:48px;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Anterior">&#8592;</button>
+    <button id="lbNext" onclick="lbNav(1)" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);border:none;color:#fff;font-size:2rem;border-radius:50%;width:48px;height:48px;cursor:pointer;display:flex;align-items:center;justify-content:center;" aria-label="Proximo">&#8594;</button>
+    <img id="lbImg" src="" alt="" style="max-width:90vw;max-height:80vh;border-radius:8px;object-fit:contain;">
+    <iframe id="lbIframe" src="" style="display:none;width:90vw;max-width:900px;height:56.25vw;max-height:75vh;border:none;border-radius:8px;"></iframe>
+    <div style="margin-top:14px;text-align:center;"><p id="lbCaption" style="color:#fff;font-size:.95rem;margin:0 0 4px;"></p><p id="lbCounter" style="color:rgba(255,255,255,.6);font-size:.8rem;margin:0;"></p></div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
   <div class="footer-inner">
@@ -1324,6 +1553,7 @@
         <li><a href="/sobre/">Sobre a Agita Morango</a></li>
         <li><a href="/equipe-de-recreadores-infantis-em-sao-paulo/">Nossa Equipe</a></li>
         <li><a href="/cases-e-clientes-de-evento-infantil/">Cases e Clientes</a></li>
+        <li><a href="/clientes/">Clientes</a></li>
         <li><a href="/contato/">Contato</a></li>
         <li><a href="/trabalhe-conosco/">Trabalhe Conosco</a></li>
       </ul>
@@ -1332,7 +1562,7 @@
   <p class="footer-wordmark" aria-hidden="true">Agita <span>Morango</span></p>
   <div class="footer-bottom">
     <p>&copy; 2026 Agita Morango. Todos os direitos reservados.</p>
-    <p><a href="/politica-privacidade/">Politica de Privacidade</a></p>
+    <p><a href="/politica-privacidade/">Politica de Privacidade</a> &nbsp;|&nbsp; <a href="/termos-de-uso/">Termos de Uso</a></p>
   </div>
 </footer>
 
@@ -1367,6 +1597,21 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
     }, { threshold: 0.12 });
     revealEls.forEach(el => io.observe(el));
+
+    var rcEventType='';
+    function rcNextStep(step,val){
+      if(step===2){rcEventType=val;}
+      if(step===3){var s=document.getElementById('rcSummary');if(s)s.textContent='Evento: '+rcEventType+' | Criancas: '+val;}
+      for(var i=1;i<=3;i++){var el=document.getElementById('rcStep'+i);if(el)el.style.display='none';}
+      var next=document.getElementById('rcStep'+step);if(next)next.style.display='block';
+    }
+    var lbItems=[],lbIdx=0;
+    function lbBuild(){lbItems=Array.from(document.querySelectorAll('.galeria-item[data-lb-type]'));}
+    function lbShow(i){if(!lbItems.length)lbBuild();lbIdx=(i+lbItems.length)%lbItems.length;var el=lbItems[lbIdx],t=el.dataset.lbType,bd=document.getElementById('lbBackdrop');document.getElementById('lbImg').style.display='none';document.getElementById('lbIframe').style.display='none';if(t==='video'){document.getElementById('lbIframe').src=el.dataset.lbSrc;document.getElementById('lbIframe').style.display='block';}else{document.getElementById('lbImg').src=el.dataset.lbSrc;document.getElementById('lbImg').alt=el.dataset.lbCaption||'';document.getElementById('lbImg').style.display='block';}document.getElementById('lbCaption').textContent=el.dataset.lbCaption||'';document.getElementById('lbCounter').textContent=(lbIdx+1)+' / '+lbItems.length;bd.style.display='flex';bd.style.alignItems='center';bd.style.justifyContent='center';document.body.style.overflow='hidden';}
+    function lbOpen(el){if(!lbItems.length)lbBuild();lbShow(lbItems.indexOf(el));}
+    function lbNav(d){lbShow(lbIdx+d);}
+    function lbClose(){var bd=document.getElementById('lbBackdrop');if(bd){bd.style.display='none';}document.getElementById('lbIframe').src='';document.body.style.overflow='';}
+    document.addEventListener('keydown',function(e){var bd=document.getElementById('lbBackdrop');if(!bd||bd.style.display==='none')return;if(e.key==='Escape')lbClose();if(e.key==='ArrowLeft')lbNav(-1);if(e.key==='ArrowRight')lbNav(1);});
   </script>
 
   <!-- JSON-LD -->

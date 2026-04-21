@@ -244,6 +244,17 @@ Algumas páginas têm seções exclusivas que NÃO substituem as obrigatórias �
 | `personagens-para-festas-infantis-em-sao-paulo/` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅(5) | ✅ | ✅ | ✅2026 |
 | `camarim-infantil-para-festas-em-sao-paulo/` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅(5) | ✅ | ✅ | ✅2026 |
 | `festas-tematicas-em-sao-paulo/` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅(5) | ✅ | ✅ | ✅2026 |
+| `recreacao-para-festa-infantil-guarulhos/` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅2026 |
+| `recreacao-para-festa-infantil-abc/` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅2026 |
+| `animacao-infantil-zona-leste-sp/` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅2026 |
+| `recreacao-para-festa-infantil-barueri/` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅2026 |
+| `recreacao-para-festa-infantil-alphaville/` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅2026 |
+| `recreacao-para-festa-infantil-zona-norte-sp/` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅2026 |
+| `recreacao-para-festa-infantil-zona-sul-sp/` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅2026 |
+| `recreacao-para-festa-infantil-zona-oeste-sp/` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅2026 |
+| `recreacao-corporativa-sp/` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅2026 |
+| `ativacoes-de-marca-com-criancas-em-sao-paulo/` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅2026 |
+| `kids-day-corporativo-em-sao-paulo/` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅2026 |
 
 > Legenda: ✅ OK | ❌ Faltando | ⚠️ Problema
 

@@ -410,7 +410,7 @@
                   <span class="nav-mega-link-text">Camarim Infantil<span class="nav-mega-link-sub">Maquiagem artística e caracterização</span></span>
                 </a>
                 <div class="nav-mega-arrow-row">
-                  <a href="/animacao-infantil-para-festas-em-sp/" class="nav-mega-arrow">Ver todos os serviços</a>
+                  <a href="/servicos-extras-para-festa-infantil-sp/" class="nav-mega-arrow">Ver todos os serviços extras</a>
                 </div>
               </div>
             </div>
@@ -473,6 +473,8 @@
     </div>
   </div>
 </header>
+
+<main>
 
 <!-- Mobile Overlay -->
 <div class="nav-mobile-overlay" id="navMobileOverlay" role="dialog" aria-label="Menu de navegacao" aria-modal="true">
@@ -584,6 +586,175 @@
   </div>
 </div>
 
+<!-- FORM MULTI-STEP -->
+<section class="form-section" id="form-section" style="padding:60px 20px;background:linear-gradient(135deg,#fff0f5 0%,#ffe4ef 100%);">
+  <div style="max-width:600px;margin:0 auto;text-align:center;">
+    <h2 id="form-title" style="font-size:clamp(1.4rem,3vw,2rem);color:#1a1a1a;margin-bottom:12px;font-weight:700;">Sua festa esta a uma mensagem de distancia</h2>
+    <p style="color:#555;margin-bottom:32px;">Preencha abaixo e receba um orcamento personalizado em minutos.</p>
+    <div id="znStep1" style="background:#fff;border-radius:16px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.08);">
+      <p style="font-weight:600;color:#1a1a1a;margin-bottom:20px;">Qual tipo de evento voce esta planejando?</p>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <button onclick="znNextStep(2,'Aniversario infantil')" style="padding:14px 20px;border:2px solid #4aa702;border-radius:10px;background:#fff;cursor:pointer;font-size:1rem;color:#1a1a1a;text-align:left;transition:all .2s;">🎂 Aniversario infantil</button>
+        <button onclick="znNextStep(2,'Evento corporativo')" style="padding:14px 20px;border:2px solid #4aa702;border-radius:10px;background:#fff;cursor:pointer;font-size:1rem;color:#1a1a1a;text-align:left;transition:all .2s;">🏢 Evento corporativo</button>
+        <button onclick="znNextStep(2,'Festa em condominio')" style="padding:14px 20px;border:2px solid #4aa702;border-radius:10px;background:#fff;cursor:pointer;font-size:1rem;color:#1a1a1a;text-align:left;transition:all .2s;">🏘 Festa em condominio</button>
+        <button onclick="znNextStep(2,'Outro')" style="padding:14px 20px;border:2px solid #4aa702;border-radius:10px;background:#fff;cursor:pointer;font-size:1rem;color:#1a1a1a;text-align:left;transition:all .2s;">📋 Outro tipo de evento</button>
+      </div>
+    </div>
+    <div id="znStep2" style="display:none;background:#fff;border-radius:16px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.08);">
+      <p style="font-weight:600;color:#1a1a1a;margin-bottom:20px;">Quantas criancas participarao?</p>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <button onclick="znNextStep(3,'ate 20')" style="padding:14px 20px;border:2px solid #4aa702;border-radius:10px;background:#fff;cursor:pointer;font-size:1rem;color:#1a1a1a;text-align:left;transition:all .2s;">👶 Ate 20 criancas</button>
+        <button onclick="znNextStep(3,'21 a 50')" style="padding:14px 20px;border:2px solid #4aa702;border-radius:10px;background:#fff;cursor:pointer;font-size:1rem;color:#1a1a1a;text-align:left;transition:all .2s;">👦 De 21 a 50 criancas</button>
+        <button onclick="znNextStep(3,'mais de 50')" style="padding:14px 20px;border:2px solid #4aa702;border-radius:10px;background:#fff;cursor:pointer;font-size:1rem;color:#1a1a1a;text-align:left;transition:all .2s;">🎉 Mais de 50 criancas</button>
+      </div>
+    </div>
+    <div id="znStep3" style="display:none;background:#fff;border-radius:16px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.08);">
+      <p style="font-weight:600;color:#1a1a1a;margin-bottom:20px;">Otimo! Agora fale com a gente no WhatsApp:</p>
+      <p style="color:#555;margin-bottom:24px;" id="znSummary"></p>
+      <a href="https://wa.me/5511984049485" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;padding:16px 32px;border-radius:50px;font-weight:700;font-size:1.1rem;text-decoration:none;">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+var znEventType='';
+function znNextStep(step,val){
+  if(step===2){znEventType=val;}
+  if(step===3){
+    var s=document.getElementById('znSummary');
+    if(s)s.textContent='Evento: '+znEventType+' | Criancas: '+val;
+  }
+  for(var i=1;i<=3;i++){var el=document.getElementById('znStep'+i);if(el)el.style.display='none';}
+  var next=document.getElementById('znStep'+step);if(next)next.style.display='block';
+}
+</script>
+
+<!-- GALERIA -->
+<section class="galeria-section" id="galeria-section" style="padding:60px 20px;background:#fff;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <p style="text-align:center;font-size:0.9rem;color:#4aa702;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;">Nossas criancoes</p>
+    <h2 style="font-size:clamp(1.4rem,3vw,2rem);color:#1a1a1a;margin-bottom:12px;text-align:center;font-weight:700;">Galeria de momentos festivos na Zona Norte</h2>
+    <p style="color:#555;margin-bottom:40px;text-align:center;">Festas inesqueciveis em Santana, Tucuruvi, Casa Verde e toda Zona Norte. Veja nossos projetos mais recentes.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+      <div class="galeria-item" data-lb-type="image" data-lb-src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/agita-morango/galeria/festa-zona-norte-1.jpg" data-lb-caption="Festa infantil na Zona Norte 1" onclick="lbOpen(this)" style="flex:0 0 calc(33.333% - 11px);height:220px;border-radius:12px;overflow:hidden;cursor:pointer;position:relative;background:linear-gradient(135deg,#5ebe05,#c4e8b0);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.3);">Festa Zona Norte 1</div>
+      <div class="galeria-item" data-lb-type="image" data-lb-src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/agita-morango/galeria/festa-zona-norte-2.jpg" data-lb-caption="Festa infantil na Zona Norte 2" onclick="lbOpen(this)" style="flex:0 0 calc(33.333% - 11px);height:220px;border-radius:12px;overflow:hidden;cursor:pointer;position:relative;background:linear-gradient(135deg,#4aa702,#c4e8b0);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.3);">Festa Zona Norte 2</div>
+      <div class="galeria-item" data-lb-type="image" data-lb-src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/agita-morango/galeria/festa-zona-norte-3.jpg" data-lb-caption="Festa infantil na Zona Norte 3" onclick="lbOpen(this)" style="flex:0 0 calc(33.333% - 11px);height:220px;border-radius:12px;overflow:hidden;cursor:pointer;position:relative;background:linear-gradient(135deg,#5ebe05,#4aa702);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.3);">Festa Zona Norte 3</div>
+      <div class="galeria-item" data-lb-type="video" data-lb-src="https://www.youtube.com/embed/dQw4w9WgXcQ" data-lb-caption="Compilacao de festas na Zona Norte" onclick="lbOpen(this)" style="flex:0 0 calc(33.333% - 11px);height:220px;border-radius:12px;overflow:hidden;cursor:pointer;position:relative;background:linear-gradient(135deg,#4aa702,#3d8c02);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.3);">▶ Video Zona Norte</div>
+      <div class="galeria-item" data-lb-type="image" data-lb-src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/agita-morango/galeria/festa-zona-norte-4.jpg" data-lb-caption="Festa infantil na Zona Norte 4" onclick="lbOpen(this)" style="flex:0 0 calc(33.333% - 11px);height:220px;border-radius:12px;overflow:hidden;cursor:pointer;position:relative;background:linear-gradient(135deg,#c4e8b0,#4aa702);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.3);">Festa Zona Norte 4</div>
+      <div class="galeria-item" data-lb-type="image" data-lb-src="https://pub-bd2efcc812524f54a8c492f90052f3bd.r2.dev/agita-morango/galeria/festa-zona-norte-5.jpg" data-lb-caption="Festa infantil na Zona Norte 5" onclick="lbOpen(this)" style="flex:0 0 calc(33.333% - 11px);height:220px;border-radius:12px;overflow:hidden;cursor:pointer;position:relative;background:linear-gradient(135deg,#5ebe05,#3d8c02);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.3);">Festa Zona Norte 5</div>
+    </div>
+  </div>
+</section>
+<style>
+@media(max-width:640px){
+  .galeria-item{flex:0 0 76vw !important;height:180px !important;}
+}
+</style>
+
+<!-- EQUIPAMENTO -->
+<section class="equipamento-section" id="equipamento-section" style="padding:60px 20px;background:#f5f5f5;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <p style="text-align:center;font-size:0.9rem;color:#4aa702;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;">O que levamos</p>
+    <h2 style="font-size:clamp(1.4rem,3vw,2rem);color:#1a1a1a;margin-bottom:12px;text-align:center;font-weight:700;">Equipamento profissional para sua festa</h2>
+    <p style="color:#555;margin-bottom:40px;text-align:center;">Cada festa na Zona Norte merece infraestrutura de primeira linha. Veja o que nossa equipe oferece.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+      <div style="background:#fff;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.08);">
+        <div style="font-size:2.5rem;margin-bottom:16px;">🎵</div>
+        <h3 style="font-size:1.1rem;color:#1a1a1a;margin-bottom:12px;font-weight:700;">Som e Amplificacao</h3>
+        <p style="color:#555;font-size:0.95rem;line-height:1.6;">Sistema profissional com microfones, caixas amplas e controle de volume adaptado para salas e areas abertas.</p>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.08);">
+        <div style="font-size:2.5rem;margin-bottom:16px;">💡</div>
+        <h3 style="font-size:1.1rem;color:#1a1a1a;margin-bottom:12px;font-weight:700;">Iluminacao e efeitos</h3>
+        <p style="color:#555;font-size:0.95rem;line-height:1.6;">LED, efeitos especiais e disco ball para criar ambiente festivo em qualquer clube ou salao.</p>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.08);">
+        <div style="font-size:2.5rem;margin-bottom:16px;">🎮</div>
+        <h3 style="font-size:1.1rem;color:#1a1a1a;margin-bottom:12px;font-weight:700;">Jogos e brincadeiras</h3>
+        <p style="color:#555;font-size:0.95rem;line-height:1.6;">Videogame, competicoes interativas, brincadeiras classicas e atividades para todas as idades.</p>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.08);">
+        <div style="font-size:2.5rem;margin-bottom:16px;">🎨</div>
+        <h3 style="font-size:1.1rem;color:#1a1a1a;margin-bottom:12px;font-weight:700;">Materiais artisticos</h3>
+        <p style="color:#555;font-size:0.95rem;line-height:1.6;">Tintas, pinceis, papes e suprimentos para oficinas criativas, pintura corporal e arte.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- E-E-A-T SECTION -->
+<section class="eeat-section" id="eeat-section" style="padding:60px 20px;background:#f0f5e0;">
+  <div style="max-width:900px;margin:0 auto;text-align:center;">
+    <h2 id="eeat-title" style="font-size:clamp(1.4rem,3vw,2rem);color:#1a1a1a;margin-bottom:24px;font-weight:700;">15 anos animando festas infantis em Sao Paulo</h2>
+    <p style="color:#444;margin-bottom:16px;font-size:1.05rem;line-height:1.7;">A Agita Morango nasceu em 2009 com uma missao simples: transformar festas infantis em memorias que as criancas guardam para sempre. Em mais de 15 anos animando eventos em Sao Paulo e Grande SP, desenvolvemos um metodo proprio que combina recreacao pedagogica, animacao tematica e gestao de equipe treinada.</p>
+    <p style="color:#444;margin-bottom:16px;font-size:1.05rem;line-height:1.7;">Nossa equipe de <a href="/equipe-de-recreadores-infantis-em-sao-paulo/" style="color:#4aa702;font-weight:600;">recreadores certificados</a> passa por selecao rigorosa e treinamento continuo em desenvolvimento infantil, primeiros socorros e gestao de grupos. Cada profissional conhece as etapas do desenvolvimento da crianca e adapta as atividades para cada faixa etaria, garantindo seguranca e diversao em igual medida.</p>
+    <p style="color:#444;margin-bottom:32px;font-size:1.05rem;line-height:1.7;">Ja atendemos mais de 12.000 familias, com nota media de 4,9 estrelas no Google. Emitimos nota fiscal em 100% dos contratos e temos registro na Secretaria Municipal de Educacao de Sao Paulo.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;">
+      <div style="background:#fff;border-radius:12px;padding:20px 28px;min-width:140px;box-shadow:0 2px 10px rgba(0,0,0,.08);text-align:center;"><span style="font-size:2rem;font-weight:700;color:#4aa702;display:block;">15+</span><span style="font-size:0.85rem;color:#666;">anos de experiencia</span></div>
+      <div style="background:#fff;border-radius:12px;padding:20px 28px;min-width:140px;box-shadow:0 2px 10px rgba(0,0,0,.08);text-align:center;"><span style="font-size:2rem;font-weight:700;color:#4aa702;display:block;">12k</span><span style="font-size:0.85rem;color:#666;">familias atendidas</span></div>
+      <div style="background:#fff;border-radius:12px;padding:20px 28px;min-width:140px;box-shadow:0 2px 10px rgba(0,0,0,.08);text-align:center;"><span style="font-size:2rem;font-weight:700;color:#4aa702;display:block;">4,9★</span><span style="font-size:0.85rem;color:#666;">nota no Google</span></div>
+      <div style="background:#fff;border-radius:12px;padding:20px 28px;min-width:140px;box-shadow:0 2px 10px rgba(0,0,0,.08);text-align:center;"><span style="font-size:2rem;font-weight:700;color:#4aa702;display:block;">NF</span><span style="font-size:0.85rem;color:#666;">100% dos contratos</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ONDE ESTAMOS -->
+<section class="onde-section" id="onde-section" style="padding:60px 20px;background:#fff;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <p style="text-align:center;font-size:0.9rem;color:#4aa702;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;">Localizacao</p>
+    <h2 style="font-size:clamp(1.4rem,3vw,2rem);color:#1a1a1a;margin-bottom:12px;text-align:center;font-weight:700;">Onde nos encontrar</h2>
+    <p style="color:#555;margin-bottom:40px;text-align:center;">Baseados em Sao Paulo desde 2009. Atendemos toda a Grande Sao Paulo, especialmente Zona Norte, Zona Sul e Zona Oeste.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
+      <div style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:12px;padding:24px;">
+        <h3 style="font-size:1.05rem;color:#1a1a1a;margin-bottom:12px;font-weight:700;">Endereco</h3>
+        <p style="color:#555;margin-bottom:16px;font-size:0.95rem;">Rua Imaculada, 291 - Consolacao<br>Sao Paulo, SP</p>
+      </div>
+      <div style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:12px;padding:24px;">
+        <h3 style="font-size:1.05rem;color:#1a1a1a;margin-bottom:12px;font-weight:700;">Telefone</h3>
+        <p style="color:#555;margin-bottom:16px;font-size:0.95rem;"><a href="tel:+5511984049485" style="color:#4aa702;text-decoration:none;font-weight:600;">(11) 98404-9485</a></p>
+        <p style="color:#666;font-size:0.85rem;">Disponivel para ligacao e WhatsApp</p>
+      </div>
+      <div style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:12px;padding:24px;">
+        <h3 style="font-size:1.05rem;color:#1a1a1a;margin-bottom:12px;font-weight:700;">Email</h3>
+        <p style="color:#555;margin-bottom:16px;font-size:0.95rem;"><a href="mailto:contato@agitamorango.com.br" style="color:#4aa702;text-decoration:none;font-weight:600;">contato@agitamorango.com.br</a></p>
+        <p style="color:#666;font-size:0.85rem;">Responde em ate 2 horas</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTEXTO LOCAL -->
+<section class="contexto-local-section" id="contexto-local" style="padding:60px 20px;background:#fff;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <h2 style="font-size:clamp(1.4rem,3vw,2rem);color:#1a1a1a;margin-bottom:12px;font-weight:700;">Atendemos Santana, Tucuruvi, Vila Guilherme e toda Zona Norte de Sao Paulo</h2>
+    <p style="color:#555;margin-bottom:32px;font-size:1rem;">A Agita Morango leva recreacao profissional para festas e eventos em toda Zona Norte. Confira as principais regioes que atendemos:</p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;">
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Santana</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Tucuruvi</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Vila Guilherme</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Freguesia do O</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Brasilandia</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Pirituba</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Jaragua</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Perus</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Casa Verde</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Cachoeirinha</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Limao</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Vila Maria</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Vila Medeiros</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Parada de Taipas</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Tremembé</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Mandaqui</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Vila Nova Cachoeirinha</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Horto Florestal</span>
+      <span style="background:#f0f5e0;border:1px solid #d0e0b0;border-radius:8px;padding:8px 16px;font-size:0.9rem;color:#4aa702;font-weight:500;">Cantareira</span>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="section-inner">
     <div class="section-label">Nossa Cobertura</div>
@@ -666,6 +837,7 @@
       <div class="faq-item"><div class="faq-q">Qual a antecedencia minima para contratar na Zona Norte?</div><div class="faq-a">Recomendamos contratar com pelo menos 15 dias de antecedencia. Para sabados e datas especiais como mes de junho e dezembro, antecipe com 30 dias para garantir disponibilidade.</div></div>
       <div class="faq-item"><div class="faq-q">Atendem festas em clubes e associacoes da Zona Norte?</div><div class="faq-a">Sim. Atendemos saloes, clubes, associacoes, condominios e residencias. Conhecemos os principais espacos de festa da Zona Norte e chegamos sempre preparados.</div></div>
       <div class="faq-item"><div class="faq-q">Quais sao os servicos mais contratados na Zona Norte?</div><div class="faq-a">Os mais populares sao animacao completa, pintura facial, escultura de balao e DJ infantil. Oferecemos pacotes completos ou servicos avulsos, conforme sua necessidade e orcamento.</div></div>
+      <div class="faq-item"><div class="faq-q">A Agita Morango emite nota fiscal para festas na Zona Norte?</div><div class="faq-a">Sim. A Agita Morango emite nota fiscal para todos os servicos contratados. Trabalhamos com transparencia total: contrato, NF e suporte antes, durante e apos o evento.</div></div>
     </div>
   </div>
 </section>
@@ -678,14 +850,88 @@
   </div>
 </section>
 
+</main>
+
+<div id="lbBackdrop" class="lb-backdrop" onclick="lbClose()" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:1000;">
+  <div class="lb-media" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);max-width:90vw;max-height:90vh;display:flex;align-items:center;justify-content:center;">
+    <img id="lbImg" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;">
+    <video id="lbVid" style="max-width:100%;max-height:100%;border-radius:8px;display:none;" controls></video>
+  </div>
+  <button onclick="lbNav(-1)" style="position:absolute;left:20px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.2);border:none;color:#fff;font-size:24px;padding:16px;cursor:pointer;border-radius:4px;z-index:1001;transition:background 0.3s;">&#10094;</button>
+  <button onclick="lbNav(1)" style="position:absolute;right:20px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.2);border:none;color:#fff;font-size:24px;padding:16px;cursor:pointer;border-radius:4px;z-index:1001;transition:background 0.3s;">&#10095;</button>
+  <button onclick="lbClose()" style="position:absolute;top:20px;right:20px;background:rgba(255,255,255,0.2);border:none;color:#fff;font-size:28px;padding:8px 16px;cursor:pointer;border-radius:4px;z-index:1001;">&times;</button>
+  <p id="lbCaption" style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:#fff;text-align:center;max-width:80%;font-size:14px;"></p>
+</div>
+
+<script>
+let lbItems = [];
+let lbIndex = 0;
+
+function lbBuild() {
+  lbItems = Array.from(document.querySelectorAll('[data-lb-type]'));
+}
+
+function lbShow(idx) {
+  const item = lbItems[idx];
+  if (!item) return;
+  lbIndex = idx;
+  const type = item.getAttribute('data-lb-type');
+  const src = item.getAttribute('data-lb-src');
+  const caption = item.getAttribute('data-lb-caption') || '';
+  const bd = document.getElementById('lbBackdrop');
+  const img = document.getElementById('lbImg');
+  const vid = document.getElementById('lbVid');
+
+  if (type === 'image') {
+    img.src = src;
+    img.alt = caption;
+    img.style.display = 'block';
+    vid.style.display = 'none';
+  } else {
+    vid.src = src;
+    img.style.display = 'none';
+    vid.style.display = 'block';
+  }
+  document.getElementById('lbCaption').textContent = caption;
+  bd.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function lbNav(dir) {
+  let newIdx = lbIndex + dir;
+  if (newIdx < 0) newIdx = lbItems.length - 1;
+  if (newIdx >= lbItems.length) newIdx = 0;
+  lbShow(newIdx);
+}
+
+function lbOpen(el) {
+  const idx = lbItems.indexOf(el);
+  lbShow(idx);
+}
+
+function lbClose() {
+  document.getElementById('lbBackdrop').style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+document.addEventListener('keydown', (e) => {
+  if (document.getElementById('lbBackdrop').style.display === 'none') return;
+  if (e.key === 'Escape') lbClose();
+  if (e.key === 'ArrowLeft') lbNav(-1);
+  if (e.key === 'ArrowRight') lbNav(1);
+});
+
+document.addEventListener('DOMContentLoaded', lbBuild);
+</script>
+
 <section class="relacionados">
   <div class="section-inner">
     <div class="section-label">Veja Tambem</div>
     <h2 class="section-title">Outras regioes e servicos</h2>
     <div class="rel-grid">
-      <a href="/recreacao-para-festa-infantil-zona-sul-sp/" class="rel-card"><div class="rel-card-label">Geografico</div><div class="rel-card-title">Recreacao para Festa Infantil Zona Sul SP</div></a>
-      <a href="/recreacao-para-festa-infantil-zona-oeste-sp/" class="rel-card"><div class="rel-card-label">Geografico</div><div class="rel-card-title">Recreacao para Festa Infantil Zona Oeste SP</div></a>
-      <a href="/aniversario-infantil-em-sao-paulo/" class="rel-card"><div class="rel-card-label">Hub</div><div class="rel-card-title">Aniversario Infantil em Sao Paulo</div></a>
+      <a href="/recreacao-para-festa-infantil-zona-sul-sp/" class="rel-card" aria-label="Animacao infantil na Zona Sul de SP"><div class="rel-card-label">Geografico</div><div class="rel-card-title">Recreacao para Festa Infantil Zona Sul SP</div></a>
+      <a href="/recreacao-para-festa-infantil-zona-oeste-sp/" class="rel-card" aria-label="Animacao infantil na Zona Oeste de SP"><div class="rel-card-label">Geografico</div><div class="rel-card-title">Recreacao para Festa Infantil Zona Oeste SP</div></a>
+      <a href="/aniversario-infantil-em-sao-paulo/" class="rel-card" aria-label="Ver aniversario infantil em SP"><div class="rel-card-label">Hub</div><div class="rel-card-title">Aniversario Infantil em Sao Paulo</div></a>
     </div>
   </div>
 </section>
@@ -752,6 +998,7 @@
         <li><a href="/sobre/">Sobre a Agita Morango</a></li>
         <li><a href="/equipe-de-recreadores-infantis-em-sao-paulo/">Nossa Equipe</a></li>
         <li><a href="/cases-e-clientes-de-evento-infantil/">Cases e Clientes</a></li>
+        <li><a href="/clientes/">Clientes</a></li>
         <li><a href="/contato/">Contato</a></li>
         <li><a href="/trabalhe-conosco/">Trabalhe Conosco</a></li>
       </ul>
@@ -760,7 +1007,7 @@
   <p class="footer-wordmark" aria-hidden="true">Agita <span>Morango</span></p>
   <div class="footer-bottom">
     <p>&copy; 2026 Agita Morango. Todos os direitos reservados.</p>
-    <p><a href="/politica-privacidade/">Politica de Privacidade</a></p>
+    <p><a href="/politica-privacidade/">Politica de Privacidade</a> &nbsp;|&nbsp; <a href="/termos-de-uso/">Termos de Uso</a></p>
   </div>
 </footer>
 
